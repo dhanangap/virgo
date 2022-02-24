@@ -10,6 +10,7 @@ const config = {
 	outputDir: "./dist",
 	styles: [
 		"bundle",
+		"utilities",
 	],
 
 };

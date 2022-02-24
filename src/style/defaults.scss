@@ -1,0 +1,75 @@
+// ================================================================================================
+// - Virgo Library
+// - Default Variables
+// ================================================================================================
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+
+	// [ Colors ] ---------------------------------------------------------------------------------
+	// - Background Color
+	--color-bg				: #ffffff;
+	// - Text Color
+	--color-text			: #3A3F41;
+	--color-text-lighter	: #4e5052;
+	--color-text-light		: #767c80;
+	// - Accent Color
+	--color-accent			: #1899F6;
+	--color-accent-lighter	: #28a0f5;
+	--color-accent-light	: #76c6ff;
+	--color-accent-darker	: #0c8de9;
+	--color-accent-dark		: #066eb8;
+	--color-accent-invert	: #fff;
+	// - Success Color
+	--color-success			: #04c56b;
+	--color-success-lighter	: #09d375;
+	--color-success-light	: #53eba4;
+	--color-success-darker	: #0aaf62;
+	--color-success-dark	: #078d4e;
+	// - Danger Color
+	--color-danger			: #d42c0e;
+	--color-danger-lighter	: #e23b1e;
+	--color-danger-light	: #e96750;
+	--color-danger-darker	: #b41f04;
+	--color-danger-dark		: #831907;
+	// Shading Color
+	--color-shade			: #e9ecf0;
+	--color-shade-lighter	: #f9f9fa;
+	--color-shade-light		: #eef1f5;
+	--color-shade-darker	: #b8babd;
+	--color-shade-dark		: #e1e4e7;
+	// Border Color
+	--color-border			: #767c80;
+	--color-border-lighter	: #8d9397;
+	--color-border-light	: #abb1b4;
+	--color-border-darker	: #676b6e;
+	--color-border-dark		: #4d5153;
+
+	// [ Font ] -----------------------------------------------------------------------------------
+	--font-size		: 1.8rem;
+	--font-sans		: "Helvetica", "Arial", sans-serif;
+	--font-serif	: "New York", "Georgia", sans-serif;
+	--font-mono		: "Consolas", "Menlo", monospace;
+	--font-icon		: "Material Icons";
+	--font-body		: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, var(--font-sans);
+
+	// [ Dimension ] ------------------------------------------------------------------------------
+	// - Base Dimension
+	--roundness 	: 0.4rem;
+	--spacing		: 1rem;
+	
+	// [ Transition ] -----------------------------------------------------------------------------
+	--transition-duration	: 0.2s;
+	--transition-easing		: cubic-bezier(.46,.15,.31,.88);
+	--transition			: all var(--transition-duration) var(--transition-easing);
+	
+	// [ Component Settings ] ---------------------------------------------------------------------
+	// Button
+	--button-height	: 4rem;
+	// Input
+	--input-height	: 4rem;
+	// Navbar
+	--navbar-height	: 8rem;
+
+}

@@ -1,0 +1,22 @@
+// ================================================================================================
+// - Virgo Library
+// - Base > Link
+// ================================================================================================
+
+a {
+	display: inline-flex;
+	align-items: center;
+	color: var(--color-accent);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	span.icon {
+		position: relative;
+		top: 1px;
+		margin-right: 0.5rem;
+	}
+
+}

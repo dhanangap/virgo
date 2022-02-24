@@ -1,0 +1,75 @@
+// ================================================================================================
+// - Virgo Library
+// - Reset Stylesheet
+// ================================================================================================
+
+// Box sizing rules
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+// Default base sizing
+html {
+	font-size: 10px;
+}
+
+// Remove default margins
+body,
+h1, h2, h3, h4, h5, h6, p
+figure, blockquote,
+li, ol,
+dl, dd {
+	margin: 0;
+}
+
+// Remove list styles and padding on ul, ol elements
+ul, ol {
+	padding		: 0;
+	list-style	: none;
+}
+
+// Set core root defaults
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+// Set core body defaults
+body {
+	min-height		: 100vh;
+	text-rendering	: geometricPrecision;
+	line-height		: 1;
+	background-color: #fff;
+	overflow-x		: hidden;
+	font-size 		: var(--font-size);
+	font-family 	: var(--font-body);
+}
+
+// A elements that don't have a class get default styles
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+// Make images easier to work with
+img, picture {
+	max-width	: 100%;
+	display		: block;
+}
+
+// Inherit fonts for inputs and buttons
+input, button, textarea, select {
+	font: inherit;
+}
+
+// Respect people that prefer not to see animations
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+  
+	*, *::before, *::after {
+		animation-duration			: 0.01ms !important;
+		animation-iteration-count	: 1 !important;
+		transition-duration			: 0.01ms !important;
+		scroll-behavior				: auto !important;
+	}
+}
