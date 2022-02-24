@@ -4,11 +4,11 @@ Virgo is a JavaScript library built to help developing modern web applications f
 ## Getting Started
 
 First, you need to include the bundled CSS file inside `<head>` tag:
-```
+```html
 <link rel="stylesheet" href="https://unpkg.com/@bahtera/virgo/dist/virgo.bundle.min.css">
 ```
 Then, include the bundled JS file just before the closing of `</body>` tag:
-```
+```html
 <script src="https://unpkg.com/@bahtera/virgo/dist/virgo.bundle.min.js"></script>
 ```
 Virgo is ready to launch.
