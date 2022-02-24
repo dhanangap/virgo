@@ -13,6 +13,18 @@ Then, include the bundled JS file just before the closing of `</body>` tag:
 ```
 Virgo is ready to launch.
 
+## Usage
+
+Using Virgo is easy. If you know HTML, then you know Virgo. It leverages your knowledge about Web and its technology and doesn't try to force you to learn new concepts.
+For example, to create a datepicker input inside a form with default configuration, you can do it with basic and valid HTML:
+```html
+<form>
+	<input type="datepicker" name="birthdate" data-label="Your Birthdate">
+</form>
+```
+That script will transform standard HTML date input and provide datepicker component that works accross the browsers. `data-label` attribute is optional, but it will give you a label above the input box –automagically.
+For more interesting things about what you can do with Virgo, visit the (documentation website)[https://virgo.netlify.app/].
+
 ## License
 
 Virgo is licensed under **MIT License**, which means it is available for:
