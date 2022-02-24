@@ -29,6 +29,10 @@ That script will transform standard HTML date input and provide datepicker compo
 
 For more interesting things about what you can do with Virgo, visit the documentation site on https://virgo.netlify.app/.
 
+## Working with Frameworks
+
+We are going to implement integrations with Angular, ReactJS, VueJS, and Svelte in near future. So, stay tuned!
+
 ## License
 
 Virgo is licensed under **MIT License**, which means it is available for:
