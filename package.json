@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/dhanangap/virgo/issues"
   },
-  "homepage": "https://github.com/dhanangap/virgo#readme"
+  "homepage": "https://github.com/dhanangap/virgo#readme",
+  "devDependencies": {
+    "html-loader": "^3.1.0",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1"
+  }
 }
