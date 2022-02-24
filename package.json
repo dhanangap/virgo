@@ -26,7 +26,11 @@
   },
   "homepage": "https://github.com/dhanangap/virgo#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.17",
     "html-loader": "^3.1.0",
+    "postcss": "^8.4.6",
+    "sass": "^1.49.8",
     "typescript": "^4.5.5",
     "webpack": "^5.69.1"
   }
