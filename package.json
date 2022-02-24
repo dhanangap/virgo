@@ -1,0 +1,28 @@
+{
+  "name": "@virgo/virgo",
+  "version": "0.0.1",
+  "description": "Virgo is a JavaScript library built to help developing modern web applications faster and easier.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhanangap/virgo.git"
+  },
+  "keywords": [
+    "virgo",
+    "ui",
+    "datepicker",
+    "form",
+    "tab",
+    "button",
+    "navigation"
+  ],
+  "author": "Dhanang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhanangap/virgo/issues"
+  },
+  "homepage": "https://github.com/dhanangap/virgo#readme"
+}
