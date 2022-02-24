@@ -4,7 +4,8 @@
   "description": "Virgo is a JavaScript library built to help developing modern web applications faster and easier.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && node build.js"
   },
   "repository": {
     "type": "git",
