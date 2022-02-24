@@ -1,5 +1,5 @@
 {
-  "name": "@virgo/virgo",
+  "name": "@bahtera/virgo",
   "version": "0.0.1",
   "description": "Virgo is a JavaScript library built to help developing modern web applications faster and easier.",
   "main": "index.js",
