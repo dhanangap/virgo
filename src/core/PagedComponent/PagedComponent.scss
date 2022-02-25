@@ -1,0 +1,60 @@
+// ================================================================================================
+// - Virgo Library
+// - Core > PagedComponent
+// ================================================================================================
+
+// [ Mixins ] =====================================================================================
+
+// - @mixin page
+// - To be implemented on Page component inside PagedComponent.
+@mixin page() {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	&.previous {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	&.next {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate3d(100%, 0, 0);
+	}
+
+	&:not(.next):not(.previous):not(.active) {
+		display: none !important;
+	}
+
+	// Remove vertical margins from first content and last content
+	> *:first-child {
+		margin-top: 0;
+	}
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// @mixin page-container
+// - To be implemented on PageContainer inside PagedComponent.
+@mixin page-container() {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+// [ Implementation ] =============================================================================
+// - Default PagedComponent style implementation.
+.paged-component {
+	.pages {
+		@include page-container();
+
+		.page {
+			@include page();
+		}
+	}
+}
