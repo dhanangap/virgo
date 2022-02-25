@@ -11,6 +11,7 @@ import { PagedComponentConfig, PagedComponentConfigDefaults } from "./PagedCompo
 export default class PagedComponent extends Component {
 
 	static className: string = "paged-component";
+	static defaultSelector?: string = ".paged-component";
 
 	pageContainer: PageContainer;
 	_activeIndex: number;
