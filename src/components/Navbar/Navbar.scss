@@ -1,0 +1,146 @@
+// ================================================================================================
+// - Virgo Library
+// - Component > Navbar
+// ================================================================================================
+
+// [ Mixins ] =====================================================================================
+
+@mixin navbar-brand() {
+	height: 100%;
+	padding: 0 calc(var(--spacing) * 2);
+	font-weight: 700;
+	font-size: 1.2em;
+	
+	> a {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		color: var(--navbar-brand-text);
+		text-decoration: none;
+
+		> img {
+			margin-right: var(--spacing);
+		}
+	}
+}
+
+@mixin navbar-menu-item() {
+	margin-right: calc(var(--spacing) * 0.5);
+
+	> a {
+		height: var(--button-height);
+		padding: 0 var(--spacing);
+		text-decoration: none;
+		color: var(--navbar-menu-text);
+		background-color: var(--navbar-menu-bg);
+		border-radius: var(--roundness);
+		transition: var(--transition);
+	}
+
+	&:hover {
+		> a {
+			color: var(--navbar-menu-text-hover);
+			background-color: var(--navbar-menu-bg-hover);
+			transition-duration: 0s;
+		}
+	}
+
+	> a:active {
+		color: var(--navbar-menu-text-pressed);
+		background-color: var(--navbar-menu-bg-pressed);
+		opacity: 0.75;
+		transition-duration: 0s;
+	}
+
+	&.active {
+		> a {
+			color: var(--navbar-menu-text-active);
+			background-color: var(--navbar-menu-bg-active);
+			font-weight: 500;
+		}
+	}
+}
+
+@mixin navbar-menu() {
+	margin: 0;
+	padding: 0 calc(var(--spacing) * 2);
+	list-style: none;
+	display: flex;
+
+	> li {
+		@include navbar-menu-item();
+	}
+}
+
+@mixin navbar-fixed() {
+	position: fixed;
+	z-index: 8000;
+}
+
+@mixin navbar-fixed-top() {
+	@include navbar-fixed();
+	top: 0;
+	left: 0;
+}
+
+@mixin navbar-fixed-bottom() {
+	@include navbar-fixed();
+	bottom: 0;
+	left: 0;
+}
+
+@mixin navbar() {
+	width: 100%;
+	height: var(--navbar-height, 8rem);
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: hidden;
+	background-color: var(--navbar-bg, transparent);
+
+	.menu {
+		@include navbar-menu();
+	}
+
+	.brand {
+		@include navbar-brand();
+	}
+
+	&.fixed-top {
+		@include navbar-fixed-top();
+	}
+
+	&.fixed-bottom {
+		@include navbar-fixed-bottom();
+	}
+
+	&.lift {
+		box-shadow: 0 0 2.4rem rgba(0,0,0,.07);
+	}
+}
+
+// [ Default Implementation ] =====================================================================
+
+.navbar {
+	--navbar-bg: var(--color-bg);
+	--navbar-brand-text: var(--color-text);
+	--navbar-menu-bg: transparent;
+	--navbar-menu-bg-hover: var(--color-shade-lighter);
+	--navbar-menu-bg-pressed: var(--color-shade);
+	--navbar-menu-bg-active: var(--color-accent);
+	--navbar-menu-text: var(--color-text);
+	--navbar-menu-text-hover: var(--navbar-menu-text);
+	--navbar-menu-text-pressed: var(--navbar-menu-text);
+	--navbar-menu-text-active: var(--color-accent-invert);
+
+	@include navbar();
+}
+
+.has-navbar-fixed-top {
+	padding-top: var(--navbar-height);
+}
+
+.has-navbar-fixed-bottom {
+	padding-bottom: var(--navbar-height);
+}
