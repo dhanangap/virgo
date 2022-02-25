@@ -19,9 +19,9 @@ export const PagedComponentConfigDefaults: PagedComponentConfig = {
 	autoplay: false,
 	autoplayDuration: 3000,
 
-	pageContainerSelector: "pages",
-	pageSelector: "page",
-	controlSelector: "control",
+	pageContainerSelector: ".pages",
+	pageSelector: ".page",
+	controlSelector: ".control",
 
 	draggable: true,
 
