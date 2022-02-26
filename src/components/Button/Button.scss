@@ -1,0 +1,152 @@
+// ================================================================================================
+// - Virgo Library
+// - Component > Button
+// ================================================================================================
+
+
+button, a.button {
+
+	transition: var(--transition);
+	
+	& {
+		--button-bg-color: var(--color-shade, #F0F2F5);
+		--button-text-color: var(--color-text, #3A3F41);
+		--button-text-color-hover: var(--color-text, #3A3F41);
+		--button-bg-color-hover: var(--color-shade-lighter, #e1e3e6);
+		--button-bg-color-active: var(--color-shade-darker, #d4d6da);
+		
+		--button-outline-color: var(--color-shade, #F0F2F5);
+		--button-outline-text: var(--color-text, #3A3F41);
+		--button-outline-text-hover: var(--color-text, #3A3F41);
+		
+		position: relative;
+		vertical-align: middle;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: var(--button-width, auto);
+		height: var(--button-height);
+		padding-left: calc(var(--spacing) * 2);
+		padding-right: calc(var(--spacing) * 2);
+
+		font-weight: 500;
+		color: var(--button-text-color);
+		text-decoration: none;
+		background-color: var(--button-bg-color);
+
+		border: none;
+		border-radius: var(--roundness);
+
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	&:hover {
+		color: var(--button-text-color-hover);
+		background-color: var(--button-bg-color-hover);
+	}
+
+	&:active {
+		background-color: var(--button-bg-color-active);
+		opacity: 0.75;
+		transition-duration: 0s;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	& span.icon {
+		font-family: var(--font-icon);
+		margin-left: var(--spacing);
+		margin-right: var(--spacing);
+		
+		&:first-child {
+			margin-left: calc(var(--spacing) * -1);
+		}
+		&:last-child {
+			margin-right: calc(var(--spacing) * -1);
+		}
+	}
+
+	&.outline {
+		box-shadow: inset 0 0 0 2px var(--button-outline-color);
+		color: var(--button-outline-text);
+		background-color: transparent;
+
+		&:hover {
+			background-color: var(--button-outline-color);
+			color: var(--button-outline-text-hover);
+		}
+	}
+
+	&.primary {
+		--button-text-color: #fff;
+		--button-text-color-hover: #fff;
+		--button-bg-color: var(--color-accent);
+		--button-bg-color-hover: var(--color-accent-lighter);
+		--button-bg-color-active: var(--color-accent-darker);
+		--button-outline-color: var(--color-accent);
+		--button-outline-text: var(--color-accent);
+		--button-outline-text-hover: var(--button-text-color);
+	}
+
+	&.success {
+		--button-text-color: #fff;
+		--button-text-color-hover: #fff;
+		--button-bg-color: var(--color-success);
+		--button-bg-color-hover: var(--color-success-lighter);
+		--button-bg-color-active: var(--color-success-darker);
+		--button-outline-color: var(--color-success);
+		--button-outline-text: var(--color-success);
+		--button-outline-text-hover: var(--button-text-color);
+	}
+
+	&.danger {
+		--button-text-color: #fff;
+		--button-text-color-hover: #fff;
+		--button-bg-color: var(--color-danger);
+		--button-bg-color-hover: var(--color-danger-lighter);
+		--button-bg-color-active: var(--color-danger-darker);
+		--button-outline-color: var(--color-danger);
+		--button-outline-text: var(--color-danger);
+		--button-outline-text-hover: var(--button-text-color);
+	}
+
+	&.dark {
+		--button-text-color: #fff;
+		--button-text-color-hover: #fff;
+		--button-bg-color: var(--color-text);
+		--button-bg-color-hover: var(--color-text-lighter);
+		--button-bg-color-active: var(--color-text);
+		--button-outline-color: var(--color-text);
+		--button-outline-text: var(--color-text);
+		--button-outline-text-hover: var(--button-text-color);
+	}
+
+	&.transparent {
+		--button-bg-color: transparent;
+		--button-bg-color-hover: transparent;
+		--button-bg-color-active: transparent;
+	}
+
+	&.block {
+		width: 100%;
+	}
+
+	&.circle {
+		width: var(--button-height);
+		padding: 0;
+		border-radius: 50%;
+	}
+
+	// [ Sizing ]
+
+	&.large {
+		height: calc(var(--button-height) * 1.5);
+		font-size: 1.2em;
+		border-radius: calc(var(--roundness) * 1.5);
+	}
+
+}
