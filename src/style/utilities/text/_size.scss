@@ -1,0 +1,119 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Size
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-sm					{ @include font-size(0.9); }
+.text-md					{ @include font-size(1.0); }
+.text-lg					{ @include font-size(1.2); }
+.text-xl					{ @include font-size(1.4); }
+.text-xxl					{ @include font-size(1.6); }
+
+@for $i from 1 through 4	{
+
+.text-#{$i}x 				{ @include font-size($i); }
+
+}
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:text-sm				{ @include font-size(0.9); }
+.sm\:text-md				{ @include font-size(1.0); }
+.sm\:text-lg				{ @include font-size(1.2); }
+.sm\:text-xl				{ @include font-size(1.4); }
+.sm\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 4	{
+
+.sm\:text-#{$i}x			{ @include font-size($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:text-sm				{ @include font-size(0.9); }
+.md\:text-md				{ @include font-size(1.0); }
+.md\:text-lg				{ @include font-size(1.2); }
+.md\:text-xl				{ @include font-size(1.4); }
+.md\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 4	{
+
+.md\:text-#{$i}x			{ @include font-size($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:text-sm				{ @include font-size(0.9); }
+.lg\:text-md				{ @include font-size(1.0); }
+.lg\:text-lg				{ @include font-size(1.2); }
+.lg\:text-xl				{ @include font-size(1.4); }
+.lg\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 4	{
+
+.lg\:text-#{$i}x			{ @include font-size($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:text-sm				{ @include font-size(0.9); }
+.xl\:text-md				{ @include font-size(1.0); }
+.xl\:text-lg				{ @include font-size(1.2); }
+.xl\:text-xl				{ @include font-size(1.4); }
+.xl\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 4	{
+
+.xl\:text-#{$i}x			{ @include font-size($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+.xxl\:text-sm				{ @include font-size(0.9); }
+.xxl\:text-md				{ @include font-size(1.0); }
+.xxl\:text-lg				{ @include font-size(1.2); }
+.xxl\:text-xl				{ @include font-size(1.4); }
+.xxl\:text-xxl				{ @include font-size(1.6); }
+
+@for $i from 1 through 4	{
+
+.xxl\:text-#{$i}x			{ @include font-size($i); }
+
+}
+
+}

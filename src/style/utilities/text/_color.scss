@@ -1,0 +1,91 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Color
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-color-transparent				{ @include text-color(transparent); }
+.text-color-unset					{ @include text-color(unset); }
+.text-color-black					{ @include text-color(#171717); }
+.text-color-white					{ @include text-color(#ffffff); }
+.text-color-primary					{ @include text-color(var(--color-primary)); }
+.text-color-secondary				{ @include text-color(var(--color-secondary)); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:text-color-transparent			{ @include text-color(transparent); }
+.sm\:text-color-unset				{ @include text-color(unset); }
+.sm\:text-color-black				{ @include text-color(#171717); }
+.sm\:text-color-white				{ @include text-color(#ffffff); }
+.sm\:text-color-primary				{ @include text-color(var(--color-primary)); }
+.sm\:text-color-secondary			{ @include text-color(var(--color-secondary)); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:text-color-transparent			{ @include text-color(transparent); }
+.md\:text-color-unset				{ @include text-color(unset); }
+.md\:text-color-black				{ @include text-color(#171717); }
+.md\:text-color-white				{ @include text-color(#ffffff); }
+.md\:text-color-primary				{ @include text-color(var(--color-primary)); }
+.md\:text-color-secondary			{ @include text-color(var(--color-secondary)); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:text-color-transparent			{ @include text-color(transparent); }
+.lg\:text-color-unset				{ @include text-color(unset); }
+.lg\:text-color-black				{ @include text-color(#171717); }
+.lg\:text-color-white				{ @include text-color(#ffffff); }
+.lg\:text-color-primary				{ @include text-color(var(--color-primary)); }
+.lg\:text-color-secondary			{ @include text-color(var(--color-secondary)); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:text-color-transparent			{ @include text-color(transparent); }
+.xl\:text-color-unset				{ @include text-color(unset); }
+.xl\:text-color-black				{ @include text-color(#171717); }
+.xl\:text-color-white				{ @include text-color(#ffffff); }
+.xl\:text-color-primary				{ @include text-color(var(--color-primary)); }
+.xl\:text-color-secondary			{ @include text-color(var(--color-secondary)); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )                 {
+
+.xxl\:text-color-transparent		{ @include text-color(transparent); }
+.xxl\:text-color-unset				{ @include text-color(unset); }
+.xxl\:text-color-black				{ @include text-color(#171717); }
+.xxl\:text-color-white				{ @include text-color(#ffffff); }
+.xxl\:text-color-primary			{ @include text-color(var(--color-primary)); }
+.xxl\:text-color-secondary			{ @include text-color(var(--color-secondary)); }
+
+}

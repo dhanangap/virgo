@@ -1,0 +1,91 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Background > Color
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.bg-none							{ @include background-none; }
+.bg-transparent						{ @include background-color(transparent); }
+.bg-primary							{ @include background-color(var(--color-primary)); }
+.bg-secondary						{ @include background-color(var(--color-secondary)); }
+.bg-shade							{ @include background-color(var(--color-shade)); }
+.bg-white							{ @include background-color(#fff); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:bg-none						{ @include background-none; }
+.sm\:bg-transparent					{ @include background-color(transparent); }
+.sm\:bg-primary						{ @include background-color(var(--color-primary)); }
+.sm\:bg-secondary					{ @include background-color(var(--color-secondary)); }
+.sm\:bg-shade						{ @include background-color(var(--color-shade)); }
+.sm\:bg-white						{ @include background-color(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:bg-none						{ @include background-none; }
+.md\:bg-transparent					{ @include background-color(transparent); }
+.md\:bg-primary						{ @include background-color(var(--color-primary)); }
+.md\:bg-secondary					{ @include background-color(var(--color-secondary)); }
+.md\:bg-shade						{ @include background-color(var(--color-shade)); }
+.md\:bg-white						{ @include background-color(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:bg-none						{ @include background-none; }
+.lg\:bg-transparent					{ @include background-color(transparent); }
+.lg\:bg-primary						{ @include background-color(var(--color-primary)); }
+.lg\:bg-secondary					{ @include background-color(var(--color-secondary)); }
+.lg\:bg-shade						{ @include background-color(var(--color-shade)); }
+.lg\:bg-white						{ @include background-color(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:bg-none						{ @include background-none; }
+.xl\:bg-transparent					{ @include background-color(transparent); }
+.xl\:bg-primary						{ @include background-color(var(--color-primary)); }
+.xl\:bg-secondary					{ @include background-color(var(--color-secondary)); }
+.xl\:bg-shade						{ @include background-color(var(--color-shade)); }
+.xl\:bg-white						{ @include background-color(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )     {
+
+.xxl\:bg-none						{ @include background-none; }
+.xxl\:bg-transparent				{ @include background-color(transparent); }
+.xxl\:bg-primary					{ @include background-color(var(--color-primary)); }
+.xxl\:bg-secondary					{ @include background-color(var(--color-secondary)); }
+.xxl\:bg-shade						{ @include background-color(var(--color-shade)); }
+.xxl\:bg-white						{ @include background-color(#fff); }
+
+}

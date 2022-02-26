@@ -1,0 +1,79 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Align
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-transform-none				{ @include text-transform(none); }
+.text-capitalize					{ @include text-transform(capitalize); }
+.text-uppercase						{ @include text-transform(uppercase); }
+.text-lowercase						{ @include text-transform(lowercase); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:text-transform-none			{ @include text-transform(none); }
+.sm\:text-capitalize				{ @include text-transform(capitalize); }
+.sm\:text-uppercase					{ @include text-transform(uppercase); }
+.sm\:text-lowercase					{ @include text-transform(lowercase); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:text-transform-none			{ @include text-transform(none); }
+.md\:text-capitalize				{ @include text-transform(capitalize); }
+.md\:text-uppercase					{ @include text-transform(uppercase); }
+.md\:text-lowercase					{ @include text-transform(lowercase); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:text-transform-none			{ @include text-transform(none); }
+.lg\:text-capitalize				{ @include text-transform(capitalize); }
+.lg\:text-uppercase					{ @include text-transform(uppercase); }
+.lg\:text-lowercase					{ @include text-transform(lowercase); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:text-transform-none			{ @include text-transform(none); }
+.xl\:text-capitalize				{ @include text-transform(capitalize); }
+.xl\:text-uppercase					{ @include text-transform(uppercase); }
+.xl\:text-lowercase					{ @include text-transform(lowercase); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )                 {
+
+.xxl\:text-transform-none			{ @include text-transform(none); }
+.xxl\:text-capitalize				{ @include text-transform(capitalize); }
+.xxl\:text-uppercase				{ @include text-transform(uppercase); }
+.xxl\:text-lowercase				{ @include text-transform(lowercase); }
+
+}

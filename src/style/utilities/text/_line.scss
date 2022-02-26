@@ -1,0 +1,97 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Line Height
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-line-0\.8				{ @include line-height(0.8); }
+.text-line-1				{ @include line-height(1.0); }
+.text-line-1\.2				{ @include line-height(1.2); }
+.text-line-1\.4				{ @include line-height(1.4); }
+.text-line-1\.6				{ @include line-height(1.6); }
+.text-line-1\.8				{ @include line-height(1.8); }
+.text-line-2				{ @include line-height(2.0); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:text-line-0\.8			{ @include line-height(0.8); }
+.sm\:text-line-1			{ @include line-height(1.0); }
+.sm\:text-line-1\.2			{ @include line-height(1.2); }
+.sm\:text-line-1\.4			{ @include line-height(1.4); }
+.sm\:text-line-1\.6			{ @include line-height(1.6); }
+.sm\:text-line-1\.8			{ @include line-height(1.8); }
+.sm\:text-line-2			{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:text-line-0\.8			{ @include line-height(0.8); }
+.md\:text-line-1			{ @include line-height(1.0); }
+.md\:text-line-1\.2			{ @include line-height(1.2); }
+.md\:text-line-1\.4			{ @include line-height(1.4); }
+.md\:text-line-1\.6			{ @include line-height(1.6); }
+.md\:text-line-1\.8			{ @include line-height(1.8); }
+.md\:text-line-2			{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:text-line-0\.8			{ @include line-height(0.8); }
+.lg\:text-line-1			{ @include line-height(1.0); }
+.lg\:text-line-1\.2			{ @include line-height(1.2); }
+.lg\:text-line-1\.4			{ @include line-height(1.4); }
+.lg\:text-line-1\.6			{ @include line-height(1.6); }
+.lg\:text-line-1\.8			{ @include line-height(1.8); }
+.lg\:text-line-2			{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:text-line-0\.8			{ @include line-height(0.8); }
+.xl\:text-line-1			{ @include line-height(1.0); }
+.xl\:text-line-1\.2			{ @include line-height(1.2); }
+.xl\:text-line-1\.4			{ @include line-height(1.4); }
+.xl\:text-line-1\.6			{ @include line-height(1.6); }
+.xl\:text-line-1\.8			{ @include line-height(1.8); }
+.xl\:text-line-2			{ @include line-height(2.0); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+.xxl\:text-line-0\.8		{ @include line-height(0.8); }
+.xxl\:text-line-1			{ @include line-height(1.0); }
+.xxl\:text-line-1\.2		{ @include line-height(1.2); }
+.xxl\:text-line-1\.4		{ @include line-height(1.4); }
+.xxl\:text-line-1\.6		{ @include line-height(1.6); }
+.xxl\:text-line-1\.8		{ @include line-height(1.8); }
+.xxl\:text-line-2			{ @include line-height(2.0); }
+
+}

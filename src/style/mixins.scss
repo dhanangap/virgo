@@ -1,0 +1,132 @@
+// =============================================================================================================================
+// * Virgo Style Library
+// -----------------------------------------------------------------------------------------------------------------------------
+// - SASS Mixins
+// =============================================================================================================================
+
+@use "sass:math";
+
+// - Background
+@mixin backdrop($value)				{ background-color: transparentize($value, 0.6) !important; }
+@mixin background-none				{ background: transparent none !important; }
+@mixin background-color($value)		{ background-color: $value !important; }
+
+// - Clip
+@mixin clip-path-none				{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important; }
+@mixin clip-circle					{ clip-path: circle(50% at 50% 50%); }
+
+// - Display
+@mixin display-none					{ display: none !important; }
+@mixin display-unset				{ display: unset !important; }
+@mixin block						{ display: block !important; }
+@mixin flex							{ display: flex !important; }
+@mixin flex-direction ($dir)		{ flex-direction: $dir !important; }
+@mixin flex-justify ($value)		{ justify-content: $value; }
+@mixin flex-align ($value)			{ align-items: $value; }
+@mixin flex-grow ($value)			{ flex-grow: $value }
+@mixin flex-shrink ($value)			{ flex-shrink: $value }
+@mixin flex-wrap ($value)			{ flex-wrap: $value }
+@mixin overflow($x: auto, $y: auto)	{ overflow-x: $x !important; overflow-y: $y !important; }
+@mixin overflow-x($x: auto)			{ overflow-x: $x !important; }
+@mixin overflow-y($y: auto)			{ overflow-y: $y !important; }
+
+// - Height
+@mixin hmax-0						{ max-height: 0px !important }
+@mixin hmax-percent($x, $y)			{ max-height: calc(calc($x / $y)) * 100% !important }
+@mixin hmax-screen($x, $y)			{ max-height: calc(calc($x / $y)) * 100vh !important }
+@mixin h-max-rem ($value)			{ max-height: $value * 1rem !important }
+@mixin h-max-em ($value)			{ max-height: $value * 1em !important }
+@mixin hmin-0						{ min-height: 0px !important }
+@mixin hmin-percent($x, $y)			{ min-height: calc(calc($x / $y)) * 100% !important }
+@mixin hmin-screen($x, $y)			{ min-height: calc(calc($x / $y)) * 100vh !important }
+@mixin h-min-rem ($value)			{ min-height: $value * 1rem !important }
+@mixin h-min-em ($value)			{ min-height: $value * 1em !important }
+@mixin h-0				    		{ height: 0px !important }
+@mixin h-auto			    		{ height: auto !important }
+@mixin h-percent($x, $y)			{ height: calc(calc($x / $y)) * 100% !important }
+@mixin h-screen($x, $y)				{ height: calc(calc($x / $y)) * 100vh !important }
+@mixin h-min						{ height: min-content !important }
+@mixin h-max						{ height: max-content !important }
+@mixin h-fit						{ height: fit-content !important }
+@mixin h-rem ($value)				{ height: $value * 1rem !important }
+@mixin h-em ($value)				{ height: $value * 1em !important }
+
+// - Margin
+@mixin margin($value)          		{ margin: $value * 1rem !important; }
+@mixin margin-top($value)      		{ margin-top: $value * 1rem !important; }
+@mixin margin-right($value)    		{ margin-right: $value * 1rem !important; }
+@mixin margin-bottom($value)   		{ margin-bottom: $value * 1rem !important; }
+@mixin margin-left($value)     		{ margin-left: $value * 1rem !important; }
+
+// - Padding
+@mixin padding($value)          	{ padding: $value * 1rem; }
+@mixin padding-top($value)      	{ padding-top: $value * 1rem; }
+@mixin padding-right($value)    	{ padding-right: $value * 1rem; }
+@mixin padding-bottom($value)   	{ padding-bottom: $value * 1rem; }
+@mixin padding-left($value)     	{ padding-left: $value * 1rem; }
+
+// - Opacity
+@mixin opacity($value)				{ @if ($value == 0) { opacity: 0; } @else { opacity: math.div($value, 100); }; }
+
+// - Position
+@mixin absolute						{ position: absolute; }
+@mixin relative						{ position: relative; }
+@mixin top ($value: 0)				{ top: $value !important; }
+@mixin right ($value: 0)			{ right: $value !important; }
+@mixin bottom ($value: 0)			{ bottom: $value !important; }
+@mixin left ($value: 0)				{ left: $value !important; }
+@mixin top-screen($x,$y)			{ top: calc($x / $y) * 100vh !important; }
+@mixin right-screen($x,$y)			{ right: calc($x / $y) * 100vh !important; }
+@mixin bottom-screen($x,$y)			{ bottom: calc($x / $y) * 100vh !important; }
+@mixin left-screen($x,$y)			{ left: calc($x / $y) * 100vh !important; }
+@mixin top-percent ($value: 0)		{ top: ($value * 1%) !important; }
+@mixin right-percent ($value: 0)	{ right: ($value * 1%) !important; }
+@mixin bottom-percent ($value: 0)	{ bottom: ($value * 1%) !important; }
+@mixin left-percent ($value: 0)		{ left: ($value * 1%) !important; }
+
+// - Scrollbar
+@mixin hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: scroll; 
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+// - Text
+@mixin text-align($value)				{ text-align: $value !important; }
+@mixin text-nowrap						{ white-space: nowrap; }
+@mixin text-color($value: inherit)		{ color: $value !important; }
+@mixin text-decoration($value: inherit)	{ text-decoration: $value !important; }
+@mixin line-height($value)				{ line-height: $value * 1em !important; }
+@mixin font-size($value: 1)				{ font-size: $value * 1em !important; }
+@mixin text-transform($value)			{ text-transform: $value !important; }
+@mixin font-weight($value: 400)			{ font-weight: $value !important; }
+
+// - Width
+@mixin wmax-0						{ max-width: 0px !important }
+@mixin wmax-percent($x, $y)			{ max-width: calc(calc($x / $y)) * 100% !important }
+@mixin wmax-screen($x, $y)			{ max-width: calc(calc($x / $y)) * 100vh !important }
+@mixin w-max-rem($value)			{ max-width: $value * 1rem !important }
+@mixin w-max-em($value)				{ max-width: $value * 1em !important }
+@mixin wmin-0						{ min-width: 0px !important }
+@mixin wmin-percent($x, $y)			{ min-width: calc(calc($x / $y)) * 100% !important }
+@mixin wmin-screen($x, $y)			{ min-width: calc(calc($x / $y)) * 100vh !important }
+@mixin w-min-rem($value)			{ min-width: $value * 1rem !important }
+@mixin w-min-em($value)				{ min-width: $value * 1em !important }
+@mixin w-0				    		{ width: 0px !important }
+@mixin w-auto						{ width: auto !important }
+@mixin w-percent($x, $y)			{ width: calc(calc($x / $y)) * 100% !important }
+@mixin w-screen($x, $y)				{ width: calc(calc($x / $y)) * 100vw !important }
+@mixin w-min						{ width: min-content !important }
+@mixin w-max						{ width: max-content !important }
+@mixin w-fit						{ width: fit-content !important }
+@mixin w-rem($value)				{ width: $value * 1rem !important }
+@mixin w-em($value)					{ width: $value * 1em !important }
+
+// - Layout
+@mixin row							{ display: flex; flex-wrap: wrap; }
+@mixin col($i)						{ @include w-percent($i,12); }
+@mixin col-offset($i)				{ margin-left: calc($i / 12) * 100% !important; }

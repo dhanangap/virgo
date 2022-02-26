@@ -1,0 +1,91 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Size
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-thin							{ @include font-weight(200); }
+.text-light							{ @include font-weight(300); }
+.text-regular						{ @include font-weight(400); }
+.text-semibold						{ @include font-weight(600); }
+.text-bold							{ @include font-weight(700); }
+.text-heavy							{ @include font-weight(800); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:text-thin						{ @include font-weight(200); }
+.sm\:text-light						{ @include font-weight(300); }
+.sm\:text-regular					{ @include font-weight(400); }
+.sm\:text-semibold					{ @include font-weight(600); }
+.sm\:text-bold						{ @include font-weight(700); }
+.sm\:text-heavy						{ @include font-weight(800); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:text-thin						{ @include font-weight(200); }
+.md\:text-light						{ @include font-weight(300); }
+.md\:text-regular					{ @include font-weight(400); }
+.md\:text-semibold					{ @include font-weight(600); }
+.md\:text-bold						{ @include font-weight(700); }
+.md\:text-heavy						{ @include font-weight(800); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:text-thin						{ @include font-weight(200); }
+.lg\:text-light						{ @include font-weight(300); }
+.lg\:text-regular					{ @include font-weight(400); }
+.lg\:text-semibold					{ @include font-weight(600); }
+.lg\:text-bold						{ @include font-weight(700); }
+.lg\:text-heavy						{ @include font-weight(800); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:text-thin						{ @include font-weight(200); }
+.xl\:text-light						{ @include font-weight(300); }
+.xl\:text-regular					{ @include font-weight(400); }
+.xl\:text-semibold					{ @include font-weight(600); }
+.xl\:text-bold						{ @include font-weight(700); }
+.xl\:text-heavy						{ @include font-weight(800); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )                 {
+
+.xxl\:text-thin						{ @include font-weight(200); }
+.xxl\:text-light					{ @include font-weight(300); }
+.xxl\:text-regular					{ @include font-weight(400); }
+.xxl\:text-semibold					{ @include font-weight(600); }
+.xxl\:text-bold						{ @include font-weight(700); }
+.xxl\:text-heavy					{ @include font-weight(800); }
+
+}

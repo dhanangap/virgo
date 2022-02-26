@@ -1,0 +1,121 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Display > Block
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.overflow-auto							{ @include overflow(auto, auto); }
+.overflow-hidden						{ @include overflow(hidden, hidden); }
+.overflow-scroll						{ @include overflow(scroll, scroll); }
+
+.overflow-x-auto						{ @include overflow-x(auto); }
+.overflow-x-hidden						{ @include overflow-x(hidden); }
+.overflow-x-scroll						{ @include overflow-x(scroll); }
+
+.overflow-y-auto						{ @include overflow-y(auto); }
+.overflow-y-hidden						{ @include overflow-y(hidden); }
+.overflow-y-scroll						{ @include overflow-y(scroll); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:overflow-auto						{ @include overflow(auto, auto); }
+.sm\:overflow-hidden					{ @include overflow(hidden, hidden); }
+.sm\:overflow-scroll					{ @include overflow(scroll, scroll); }
+
+.sm\:overflow-x-auto					{ @include overflow-x(auto); }
+.sm\:overflow-x-hidden					{ @include overflow-x(hidden); }
+.sm\:overflow-x-scroll					{ @include overflow-x(scroll); }
+
+.sm\:overflow-y-auto					{ @include overflow-y(auto); }
+.sm\:overflow-y-hidden					{ @include overflow-y(hidden); }
+.sm\:overflow-y-scroll					{ @include overflow-y(scroll); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:overflow-auto						{ @include overflow(auto, auto); }
+.md\:overflow-hidden					{ @include overflow(hidden, hidden); }
+.md\:overflow-scroll					{ @include overflow(scroll, scroll); }
+
+.md\:overflow-x-auto					{ @include overflow-x(auto); }
+.md\:overflow-x-hidden					{ @include overflow-x(hidden); }
+.md\:overflow-x-scroll					{ @include overflow-x(scroll); }
+
+.md\:overflow-y-auto					{ @include overflow-y(auto); }
+.md\:overflow-y-hidden					{ @include overflow-y(hidden); }
+.md\:overflow-y-scroll					{ @include overflow-y(scroll); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:overflow-auto						{ @include overflow(auto, auto); }
+.lg\:overflow-hidden					{ @include overflow(hidden, hidden); }
+.lg\:overflow-scroll					{ @include overflow(scroll, scroll); }
+
+.lg\:overflow-x-auto					{ @include overflow-x(auto); }
+.lg\:overflow-x-hidden					{ @include overflow-x(hidden); }
+.lg\:overflow-x-scroll					{ @include overflow-x(scroll); }
+
+.lg\:overflow-y-auto					{ @include overflow-y(auto); }
+.lg\:overflow-y-hidden					{ @include overflow-y(hidden); }
+.lg\:overflow-y-scroll					{ @include overflow-y(scroll); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:overflow-auto						{ @include overflow(auto, auto); }
+.xl\:overflow-hidden					{ @include overflow(hidden, hidden); }
+.xl\:overflow-scroll					{ @include overflow(scroll, scroll); }
+
+.xl\:overflow-x-auto					{ @include overflow-x(auto); }
+.xl\:overflow-x-hidden					{ @include overflow-x(hidden); }
+.xl\:overflow-x-scroll					{ @include overflow-x(scroll); }
+
+.xl\:overflow-y-auto					{ @include overflow-y(auto); }
+.xl\:overflow-y-hidden					{ @include overflow-y(hidden); }
+.xl\:overflow-y-scroll					{ @include overflow-y(scroll); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+.xxl\:overflow-auto						{ @include overflow(auto, auto); }
+.xxl\:overflow-hidden					{ @include overflow(hidden, hidden); }
+.xxl\:overflow-scroll					{ @include overflow(scroll, scroll); }
+
+.xxl\:overflow-x-auto					{ @include overflow-x(auto); }
+.xxl\:overflow-x-hidden					{ @include overflow-x(hidden); }
+.xxl\:overflow-x-scroll					{ @include overflow-x(scroll); }
+
+.xxl\:overflow-y-auto					{ @include overflow-y(auto); }
+.xxl\:overflow-y-hidden					{ @include overflow-y(hidden); }
+.xxl\:overflow-y-scroll					{ @include overflow-y(scroll); }
+
+}

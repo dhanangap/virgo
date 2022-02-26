@@ -1,0 +1,165 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Dimension > Maximum Height
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+// Zero height
+.hmax-0						{ @include hmax-0; }
+// Percentage and viewport
+@for $y from 1 through 12	{
+@for $x from 1 through $y	{
+
+.hmax-#{$x}\/#{$y} 			{ @include hmax-percent($x, $y); }
+.hmax-screen-#{$x}\/#{$y} 	{ @include hmax-screen($x, $y); }
+
+}}
+// Aliases
+.hmax-full					{ @extend .hmax-1\/1;}
+.hmax-half					{ @extend .hmax-1\/2; }
+.hmax-screen-full			{ @extend .hmax-screen-1\/1; }
+.hmax-screen-half			{ @extend .hmax-screen-1\/2; }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.sm\:hmax-#{$x}\/#{$y} 		    { @include hmax-percent($x, $y); }
+.sm\:hmax-screen-#{$x}\/#{$y} 	{ @include hmax-screen($x, $y); }
+
+}}
+.sm\:hmax-0					    { @include hmax-0; }
+.sm\:hmax-full					{ @extend .sm\:hmax-1\/1;}
+.sm\:hmax-half					{ @extend .sm\:hmax-1\/2; }
+.sm\:hmax-screen-full			{ @extend .sm\:hmax-screen-1\/1; }
+.sm\:hmax-screen-half			{ @extend .sm\:hmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.sm\:hmin-#{$i}					{ @include h-min-rem($i); }
+.sm\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	    {
+
+@for $y from 1 through 12	    {
+@for $x from 1 through $y	    {
+
+.md\:hmax-#{$x}\/#{$y} 		    { @include hmax-percent($x, $y); }
+.md\:hmax-screen-#{$x}\/#{$y} 	{ @include hmax-screen($x, $y); }
+
+}}
+.md\:hmax-0					    { @include hmax-0; }
+.md\:hmax-full					{ @extend .md\:hmax-1\/1;}
+.md\:hmax-half					{ @extend .md\:hmax-1\/2; }
+.md\:hmax-screen-full			{ @extend .md\:hmax-screen-1\/1; }
+.md\:hmax-screen-half			{ @extend .md\:hmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.md\:hmin-#{$i}					{ @include h-min-rem($i); }
+.md\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.lg\:hmax-#{$x}\/#{$y} 		    { @include hmax-percent($x, $y); }
+.lg\:hmax-screen-#{$x}\/#{$y} 	{ @include hmax-screen($x, $y); }
+
+}}
+.lg\:hmax-0					    { @include hmax-0; }
+.lg\:hmax-full					{ @extend .lg\:hmax-1\/1;}
+.lg\:hmax-half					{ @extend .lg\:hmax-1\/2; }
+.lg\:hmax-screen-full			{ @extend .lg\:hmax-screen-1\/1; }
+.lg\:hmax-screen-half			{ @extend .lg\:hmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.lg\:hmin-#{$i}					{ @include h-min-rem($i); }
+.lg\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.xl\:hmax-#{$x}\/#{$y} 		    { @include hmax-percent($x, $y); }
+.xl\:hmax-screen-#{$x}\/#{$y} 	{ @include hmax-screen($x, $y); }
+
+}}
+.xl\:hmax-0					    { @include hmax-0; }
+.xl\:hmax-full					{ @extend .xl\:hmax-1\/1;}
+.xl\:hmax-half					{ @extend .xl\:hmax-1\/2; }
+.xl\:hmax-screen-full			{ @extend .xl\:hmax-screen-1\/1; }
+.xl\:hmax-screen-half			{ @extend .xl\:hmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.xl\:hmin-#{$i}					{ @include h-min-rem($i); }
+.xl\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )     	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.xxl\:hmax-#{$x}\/#{$y} 		{ @include hmax-percent($x, $y); }
+.xxl\:hmax-screen-#{$x}\/#{$y}  { @include hmax-screen($x, $y); }
+
+}}
+.xxl\:hmax-0					{ @include hmax-0; }
+.xxl\:hmax-full				    { @extend .xxl\:hmax-1\/1 ;}
+.xxl\:hmax-half				    { @extend .xxl\:hmax-1\/2; }
+.xxl\:hmax-screen-full			{ @extend .xxl\:hmax-screen-1\/1; }
+.xxl\:hmax-screen-half			{ @extend .xxl\:hmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:hmin-#{$i}				{ @include h-min-rem($i); }
+.xxl\:hmin-#{$i}x				{ @include h-min-em($i); }
+
+}
+
+}

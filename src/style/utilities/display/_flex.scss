@@ -1,0 +1,230 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Display > Flex
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.flex							{ @include flex;
+
+&.flex-row						{ @include flex-direction(row); }
+&.flex-column					{ @include flex-direction(column); }
+&.flex-row-reverse				{ @include flex-direction(row-reverse); }
+&.flex-column-reverse			{ @include flex-direction(column-reverse); }
+
+&.justify-start					{ @include flex-justify(flex-start); }
+&.justify-center				{ @include flex-justify(center); }
+&.justify-end					{ @include flex-justify(flex-end); }
+&.justify-between				{ @include flex-justify(space-between); }
+&.justify-around				{ @include flex-justify(space-around); }
+&.justify-evenly				{ @include flex-justify(space-evenly); }
+
+&.align-start					{ @include flex-align(flex-start); }
+&.align-center					{ @include flex-align(center); }
+&.align-end						{ @include flex-align(flex-end); }
+&.align-baseline				{ @include flex-align(baseline); }
+&.align-stretch					{ @include flex-align(stretch); }
+
+&.flex-wrap						{ @include flex-wrap(wrap); }
+
+
+}
+
+@for $i from 0 through 12 		{
+
+.grow-#{$i}						{ @include flex-grow($i); }
+.shrink-#{$i}					{ @include flex-shrink($i); }
+
+}
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:flex						{ @include flex; }
+
+.flex, .sm\:flex				{
+&.sm\:flex-row					{ @include flex-direction(row); }
+&.sm\:flex-column				{ @include flex-direction(column); }
+&.sm\:flex-row-reverse			{ @include flex-direction(row-reverse); }
+&.sm\:flex-column-reverse		{ @include flex-direction(column-reverse); }
+
+&.sm\:justify-start				{ @include flex-justify(flex-start); }
+&.sm\:justify-center			{ @include flex-justify(center); }
+&.sm\:justify-end				{ @include flex-justify(flex-end); }
+&.sm\:justify-between			{ @include flex-justify(space-between); }
+&.sm\:justify-around			{ @include flex-justify(space-around); }
+&.sm\:justify-evenly			{ @include flex-justify(space-evenly); }
+
+&.sm\:align-start				{ @include flex-align(flex-start); }
+&.sm\:align-center				{ @include flex-align(center); }
+&.sm\:align-end					{ @include flex-align(flex-end); }
+&.sm\:align-baseline			{ @include flex-align(baseline); }
+&.sm\:align-stretch				{ @include flex-align(stretch); }
+
+&.sm\:flex-wrap					{ @include flex-wrap(wrap); }
+
+}
+
+@for $i from 0 through 12 		{
+
+.sm\:grow-#{$i}					{ @include flex-grow($i); }
+.sm\:shrink-#{$i}				{ @include flex-shrink($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:flex						{ @include flex; }
+
+.flex, .md\:flex				{
+&.md\:flex-row					{ @include flex-direction(row); }
+&.md\:flex-column				{ @include flex-direction(column); }
+&.md\:flex-row-reverse			{ @include flex-direction(row-reverse); }
+&.md\:flex-column-reverse		{ @include flex-direction(column-reverse); }
+
+&.md\:justify-start				{ @include flex-justify(flex-start); }
+&.md\:justify-center			{ @include flex-justify(center); }
+&.md\:justify-end				{ @include flex-justify(flex-end); }
+&.md\:justify-between			{ @include flex-justify(space-between); }
+&.md\:justify-around			{ @include flex-justify(space-around); }
+&.md\:justify-evenly			{ @include flex-justify(space-evenly); }
+
+&.md\:align-start				{ @include flex-align(flex-start); }
+&.md\:align-center				{ @include flex-align(center); }
+&.md\:align-end					{ @include flex-align(flex-end); }
+&.md\:align-baseline			{ @include flex-align(baseline); }
+&.md\:align-stretch				{ @include flex-align(stretch); }
+
+&.md\:flex-wrap					{ @include flex-wrap(wrap); }
+
+}
+
+@for $i from 0 through 12 		{
+
+.md\:grow-#{$i}					{ @include flex-grow($i); }
+.md\:shrink-#{$i}				{ @include flex-shrink($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:flex						{ @include flex; }
+
+.flex, .lg\:flex				{
+&.lg\:flex-row					{ @include flex-direction(row); }
+&.lg\:flex-column				{ @include flex-direction(column); }
+&.lg\:flex-row-reverse			{ @include flex-direction(row-reverse); }
+&.lg\:flex-column-reverse		{ @include flex-direction(column-reverse); }
+
+&.lg\:justify-start				{ @include flex-justify(flex-start); }
+&.lg\:justify-center			{ @include flex-justify(center); }
+&.lg\:justify-end				{ @include flex-justify(flex-end); }
+&.lg\:justify-between			{ @include flex-justify(space-between); }
+&.lg\:justify-around			{ @include flex-justify(space-around); }
+&.lg\:justify-evenly			{ @include flex-justify(space-evenly); }
+
+&.lg\:align-start				{ @include flex-align(flex-start); }
+&.lg\:align-center				{ @include flex-align(center); }
+&.lg\:align-end					{ @include flex-align(flex-end); }
+&.lg\:align-baseline			{ @include flex-align(baseline); }
+&.lg\:align-stretch				{ @include flex-align(stretch); }
+
+&.lg\:flex-wrap					{ @include flex-wrap(wrap); }
+
+}
+
+@for $i from 0 through 12 		{
+
+.lg\:grow-#{$i}					{ @include flex-grow($i); }
+.lg\:shrink-#{$i}				{ @include flex-shrink($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )             {
+
+.xl\:flex						{ @include flex; }
+
+.flex, .xl\:flex				{
+&.xl\:flex-row					{ @include flex-direction(row); }
+&.xl\:flex-column				{ @include flex-direction(column); }
+&.xl\:flex-row-reverse			{ @include flex-direction(row-reverse); }
+&.xl\:flex-column-reverse		{ @include flex-direction(column-reverse); }
+
+&.xl\:justify-start				{ @include flex-justify(flex-start); }
+&.xl\:justify-center			{ @include flex-justify(center); }
+&.xl\:justify-end				{ @include flex-justify(flex-end); }
+&.xl\:justify-between			{ @include flex-justify(space-between); }
+&.xl\:justify-around			{ @include flex-justify(space-around); }
+&.xl\:justify-evenly			{ @include flex-justify(space-evenly); }
+
+&.xl\:align-start				{ @include flex-align(flex-start); }
+&.xl\:align-center				{ @include flex-align(center); }
+&.xl\:align-end					{ @include flex-align(flex-end); }
+&.xl\:align-baseline			{ @include flex-align(baseline); }
+&.xl\:align-stretch				{ @include flex-align(stretch); }
+
+&.xl\:flex-wrap					{ @include flex-wrap(wrap); }
+
+}
+
+@for $i from 0 through 12 		{
+
+.xl\:grow-#{$i}					{ @include flex-grow($i); }
+.xl\:shrink-#{$i}				{ @include flex-shrink($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xxl\:flex						{ @include flex; }
+
+.flex, .xxl\:flex				{
+&.xxl\:flex-row					{ @include flex-direction(row); }
+&.xxl\:flex-column				{ @include flex-direction(column); }
+&.xxl\:flex-row-reverse			{ @include flex-direction(row-reverse); }
+&.xxl\:flex-column-reverse		{ @include flex-direction(column-reverse); }
+
+&.xxl\:justify-start			{ @include flex-justify(flex-start); }
+&.xxl\:justify-center			{ @include flex-justify(center); }
+&.xxl\:justify-end				{ @include flex-justify(flex-end); }
+&.xxl\:justify-between			{ @include flex-justify(space-between); }
+&.xxl\:justify-around			{ @include flex-justify(space-around); }
+&.xxl\:justify-evenly			{ @include flex-justify(space-evenly); }
+
+&.xxl\:align-start				{ @include flex-align(flex-start); }
+&.xxl\:align-center				{ @include flex-align(center); }
+&.xxl\:align-end				{ @include flex-align(flex-end); }
+&.xxl\:align-baseline			{ @include flex-align(baseline); }
+&.xxl\:align-stretch			{ @include flex-align(stretch); }
+
+&.xxl\:flex-wrap				{ @include flex-wrap(wrap); }
+
+}
+
+@for $i from 0 through 12 		{
+
+.xxl\:grow-#{$i}				{ @include flex-grow($i); }
+.xxl\:shrink-#{$i}				{ @include flex-shrink($i); }
+
+}}

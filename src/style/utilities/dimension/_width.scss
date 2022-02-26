@@ -1,0 +1,198 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Dimension > Width
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+// Zero height
+.w-0						{ @include w-0; }
+.w-auto						{ @include w-auto; }
+// Percentage and viewport
+@for $y from 1 through 12	{
+@for $x from 1 through $y	{
+
+.w-#{$x}\/#{$y} 			{ @include w-percent($x, $y); }
+.w-screen-#{$x}\/#{$y} 		{ @include w-screen($x, $y); }
+
+}}
+// Aliases
+.w-full						{ @extend .w-1\/1;}
+.w-half						{ @extend .w-1\/2; }
+.w-screen-full				{ @extend .w-screen-1\/1; }
+.w-screen-half				{ @extend .w-screen-1\/2; }
+// Content-based
+.w-min						{ @include w-min; }
+.w-max						{ @include w-max; }
+.w-fit						{ @include w-fit; }
+
+// Rem, em-based
+@for $i from 1 through 1000 {
+
+.w-#{$i}					{ @include w-rem($i); }
+.w-#{$i}x					{ @include w-em($i); }
+
+}
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.sm\:w-#{$x}\/#{$y} 		{ @include w-percent($x, $y); }
+.sm\:w-screen-#{$x}\/#{$y} 	{ @include w-screen($x, $y); }
+
+}}
+.sm\:w-auto					{ @include w-auto; }
+.sm\:w-0					{ @include w-0; }
+.sm\:w-full					{ @extend .sm\:w-1\/1;}
+.sm\:w-half					{ @extend .sm\:w-1\/2; }
+.sm\:w-screen-full			{ @extend .sm\:w-screen-1\/1; }
+.sm\:w-screen-half			{ @extend .sm\:w-screen-1\/2; }
+.sm\:w-min					{ @include w-min; }
+.sm\:w-max					{ @include w-max; }
+.sm\:w-fit					{ @include w-fit; }
+
+@for $i from 1 through 1000 {
+
+.sm\:w-#{$i}				{ @include w-rem($i); }
+.sm\:w-#{$i}x				{ @include w-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+@for $y from 1 through 12	{
+@for $x from 1 through $y	{
+
+.md\:w-#{$x}\/#{$y} 		{ @include w-percent($x, $y); }
+.md\:w-screen-#{$x}\/#{$y} 	{ @include w-screen($x, $y); }
+
+}}
+.md\:w-auto					{ @include w-auto; }
+.md\:w-0					{ @include w-0; }
+.md\:w-full					{ @extend .md\:w-1\/1;}
+.md\:w-half					{ @extend .md\:w-1\/2; }
+.md\:w-screen-full			{ @extend .md\:w-screen-1\/1; }
+.md\:w-screen-half			{ @extend .md\:w-screen-1\/2; }
+.md\:w-min					{ @include w-min; }
+.md\:w-max					{ @include w-max; }
+.md\:w-fit					{ @include w-fit; }
+
+@for $i from 1 through 1000 {
+
+.md\:w-#{$i}				{ @include w-rem($i); }
+.md\:w-#{$i}x				{ @include w-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.lg\:w-#{$x}\/#{$y} 		{ @include w-percent($x, $y); }
+.lg\:w-screen-#{$x}\/#{$y} 	{ @include w-screen($x, $y); }
+
+}}
+.lg\:w-auto					{ @include w-auto; }
+.lg\:w-0					{ @include w-0; }
+.lg\:w-full					{ @extend .lg\:w-1\/1;}
+.lg\:w-half					{ @extend .lg\:w-1\/2; }
+.lg\:w-screen-full			{ @extend .lg\:w-screen-1\/1; }
+.lg\:w-screen-half			{ @extend .lg\:w-screen-1\/2; }
+.lg\:w-min					{ @include w-min; }
+.lg\:w-max					{ @include w-max; }
+.lg\:w-fit					{ @include w-fit; }
+
+@for $i from 1 through 1000 {
+
+.lg\:w-#{$i}				{ @include w-rem($i); }
+.lg\:w-#{$i}x				{ @include w-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.xl\:w-#{$x}\/#{$y} 		{ @include w-percent($x, $y); }
+.xl\:w-screen-#{$x}\/#{$y} 	{ @include w-screen($x, $y); }
+
+}}
+.xl\:w-auto					{ @include w-auto; }
+.xl\:w-0					{ @include w-0; }
+.xl\:w-full					{ @extend .xl\:w-1\/1;}
+.xl\:w-half					{ @extend .xl\:w-1\/2; }
+.xl\:w-screen-full			{ @extend .xl\:w-screen-1\/1; }
+.xl\:w-screen-half			{ @extend .xl\:w-screen-1\/2; }
+.xl\:w-min					{ @include w-min; }
+.xl\:w-max					{ @include w-max; }
+.xl\:w-fit					{ @include w-fit; }
+
+@for $i from 1 through 1000 {
+
+.xl\:w-#{$i}				{ @include w-rem($i); }
+.xl\:w-#{$i}x				{ @include w-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.xxl\:w-#{$x}\/#{$y} 		{ @include w-percent($x, $y); }
+.xxl\:w-screen-#{$x}\/#{$y} { @include w-screen($x, $y); }
+
+}}
+.xxl\:w-auto				{ @include w-auto; }
+.xxl\:w-0					{ @include w-0; }
+.xxl\:w-full				{ @extend .xxl\:w-1\/1 ;}
+.xxl\:w-half				{ @extend .xxl\:w-1\/2; }
+.xxl\:w-screen-full			{ @extend .xxl\:w-screen-1\/1; }
+.xxl\:w-screen-half			{ @extend .xxl\:w-screen-1\/2; }
+.xxl\:w-min					{ @include w-min; }
+.xxl\:w-max					{ @include w-max; }
+.xxl\:w-fit					{ @include w-fit; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:w-#{$i}				{ @include w-rem($i); }
+.xxl\:w-#{$i}x				{ @include w-em($i); }
+
+}
+
+}

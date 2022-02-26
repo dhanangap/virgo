@@ -1,0 +1,67 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Clip > Path
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.clip-path-none 			{ @include clip-path-none; }
+.clip-circle 				{ @include clip-circle; }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:clip-path-none 		{ @include clip-path-none; }
+.sm\:clip-circle 			{ @include clip-circle; }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:clip-path-none 		{ @include clip-path-none; }
+.md\:clip-circle 			{ @include clip-circle; }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:clip-path-none 		{ @include clip-path-none; }
+.lg\:clip-circle 			{ @include clip-circle; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:clip-path-none 		{ @include clip-path-none; }
+.xl\:clip-circle 			{ @include clip-circle; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+.xxl\:clip-path-none 		{ @include clip-path-none; }
+.xxl\:clip-circle 			{ @include clip-circle; }
+
+}

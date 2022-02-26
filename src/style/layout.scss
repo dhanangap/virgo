@@ -1,0 +1,96 @@
+// ====================================================================
+// - Virgo Layout Class
+// - Row
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.row						{ @include row;
+
+.col						{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.col-#{$i} 					{ @include col($i); }
+.col-offset-#{$i} 			{ @include col-offset($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.row						{ @include row;
+
+.sm\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.sm\:col-#{$i} 				{ @include col($i); }
+.sm\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.row						{ @include row;
+
+.md\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.md\:col-#{$i} 				{ @include col($i); }
+.md\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.row						{ @include row;
+
+.lg\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.lg\:col-#{$i} 				{ @include col($i); }
+.lg\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.row						{ @include row;
+
+.xl\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.xl\:col-#{$i} 				{ @include col($i); }
+.xl\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+.row						{ @include row;
+
+.xxl\:col					{ @include flex-grow(1); }
+@for $i from 0 through 12 	{
+
+.xxl\:col-#{$i} 			{ @include col($i); }
+.xxl\:col-offset-#{$i} 		{ @include col-offset($i); }
+
+}}}

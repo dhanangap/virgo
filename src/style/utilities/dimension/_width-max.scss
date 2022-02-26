@@ -1,0 +1,173 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Dimension > Maximum Width
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+// Zero height
+.wmax-0						{ @include wmax-0; }
+// Percentage and viewport
+@for $y from 1 through 12	{
+@for $x from 1 through $y	{
+
+.wmax-#{$x}\/#{$y} 			{ @include wmax-percent($x, $y); }
+.wmax-screen-#{$x}\/#{$y} 	{ @include wmax-screen($x, $y); }
+
+}}
+// Aliases
+.wmax-full					{ @extend .wmax-1\/1;}
+.wmax-half					{ @extend .wmax-1\/2; }
+.wmax-screen-full			{ @extend .wmax-screen-1\/1; }
+.wmax-screen-half			{ @extend .wmax-screen-1\/2; }
+
+// Rem, em-based
+@for $i from 1 through 1000 {
+
+.wmax-#{$i}					{ @include w-max-rem($i); }
+.wmax-#{$i}x				{ @include w-max-em($i); }
+
+}
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.sm\:wmax-#{$x}\/#{$y} 		    { @include wmax-percent($x, $y); }
+.sm\:wmax-screen-#{$x}\/#{$y} 	{ @include wmax-screen($x, $y); }
+
+}}
+.sm\:wmax-0					    { @include wmax-0; }
+.sm\:wmax-full					{ @extend .sm\:wmax-1\/1;}
+.sm\:wmax-half					{ @extend .sm\:wmax-1\/2; }
+.sm\:wmax-screen-full			{ @extend .sm\:wmax-screen-1\/1; }
+.sm\:wmax-screen-half			{ @extend .sm\:wmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.sm\:wmax-#{$i}					{ @include w-max-rem($i); }
+.sm\:wmax-#{$i}x				{ @include w-max-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	    {
+
+@for $y from 1 through 12	    {
+@for $x from 1 through $y	    {
+
+.md\:wmax-#{$x}\/#{$y} 		    { @include wmax-percent($x, $y); }
+.md\:wmax-screen-#{$x}\/#{$y} 	{ @include wmax-screen($x, $y); }
+
+}}
+.md\:wmax-0					    { @include wmax-0; }
+.md\:wmax-full					{ @extend .md\:wmax-1\/1;}
+.md\:wmax-half					{ @extend .md\:wmax-1\/2; }
+.md\:wmax-screen-full			{ @extend .md\:wmax-screen-1\/1; }
+.md\:wmax-screen-half			{ @extend .md\:wmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.md\:wmax-#{$i}					{ @include w-max-rem($i); }
+.md\:wmax-#{$i}x				{ @include w-max-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.lg\:wmax-#{$x}\/#{$y} 		    { @include wmax-percent($x, $y); }
+.lg\:wmax-screen-#{$x}\/#{$y} 	{ @include wmax-screen($x, $y); }
+
+}}
+.lg\:wmax-0					    { @include wmax-0; }
+.lg\:wmax-full					{ @extend .lg\:wmax-1\/1;}
+.lg\:wmax-half					{ @extend .lg\:wmax-1\/2; }
+.lg\:wmax-screen-full			{ @extend .lg\:wmax-screen-1\/1; }
+.lg\:wmax-screen-half			{ @extend .lg\:wmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.lg\:wmax-#{$i}					{ @include w-max-rem($i); }
+.lg\:wmax-#{$i}x				{ @include w-max-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	    {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.xl\:wmax-#{$x}\/#{$y} 		    { @include wmax-percent($x, $y); }
+.xl\:wmax-screen-#{$x}\/#{$y} 	{ @include wmax-screen($x, $y); }
+
+}}
+.xl\:wmax-0					    { @include wmax-0; }
+.xl\:wmax-full					{ @extend .xl\:wmax-1\/1;}
+.xl\:wmax-half					{ @extend .xl\:wmax-1\/2; }
+.xl\:wmax-screen-full			{ @extend .xl\:wmax-screen-1\/1; }
+.xl\:wmax-screen-half			{ @extend .xl\:wmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.xl\:wmax-#{$i}					{ @include w-max-rem($i); }
+.xl\:wmax-#{$i}x				{ @include w-max-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )             {
+
+@for $y from 1 through 12 	    {
+@for $x from 1 through $y 	    {
+
+.xxl\:wmax-#{$x}\/#{$y} 		{ @include wmax-percent($x, $y); }
+.xxl\:wmax-screen-#{$x}\/#{$y}  { @include wmax-screen($x, $y); }
+
+}}
+.xxl\:wmax-0					{ @include wmax-0; }
+.xxl\:wmax-full				    { @extend .xxl\:wmax-1\/1 ;}
+.xxl\:wmax-half				    { @extend .xxl\:wmax-1\/2; }
+.xxl\:wmax-screen-full			{ @extend .xxl\:wmax-screen-1\/1; }
+.xxl\:wmax-screen-half			{ @extend .xxl\:wmax-screen-1\/2; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:wmax-#{$i}				{ @include w-max-rem($i); }
+.xxl\:wmax-#{$i}x				{ @include w-max-em($i); }
+
+}
+
+}

@@ -1,0 +1,197 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Dimension > Height
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+// Zero height
+.h-0						{ @include h-0; }
+.h-auto						{ @include h-auto; }
+// Percentage and viewport
+@for $y from 1 through 12	{
+@for $x from 1 through $y	{
+
+.h-#{$x}\/#{$y} 			{ @include h-percent($x, $y); }
+.h-screen-#{$x}\/#{$y} 		{ @include h-screen($x, $y); }
+
+}}
+// Aliases
+.h-full						{ @extend .h-1\/1;}
+.h-half						{ @extend .h-1\/2; }
+.h-screen-full				{ @extend .h-screen-1\/1; }
+.h-screen-half				{ @extend .h-screen-1\/2; }
+// Content-based
+.h-min						{ @include h-min; }
+.h-max						{ @include h-max; }
+.h-fit						{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.h-#{$i}					{ @include h-rem($i); }
+.h-#{$i}x					{ @include h-em($i); }
+
+}
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.sm\:h-#{$x}\/#{$y} 		{ @include h-percent($x, $y); }
+.sm\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
+
+}}
+.sm\:h-auto					{ @include h-auto; }
+.sm\:h-0					{ @include h-0; }
+.sm\:h-full					{ @extend .sm\:h-1\/1;}
+.sm\:h-half					{ @extend .sm\:h-1\/2; }
+.sm\:h-screen-full			{ @extend .sm\:h-screen-1\/1; }
+.sm\:h-screen-half			{ @extend .sm\:h-screen-1\/2; }
+.sm\:h-min					{ @include h-min; }
+.sm\:h-max					{ @include h-max; }
+.sm\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.sm\:h-#{$i}				{ @include h-rem($i); }
+.sm\:h-#{$i}x				{ @include h-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+@for $y from 1 through 12	{
+@for $x from 1 through $y	{
+
+.md\:h-#{$x}\/#{$y} 		{ @include h-percent($x, $y); }
+.md\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
+
+}}
+.md\:h-auto					{ @include h-auto; }
+.md\:h-0					{ @include h-0; }
+.md\:h-full					{ @extend .md\:h-1\/1;}
+.md\:h-half					{ @extend .md\:h-1\/2; }
+.md\:h-screen-full			{ @extend .md\:h-screen-1\/1; }
+.md\:h-screen-half			{ @extend .md\:h-screen-1\/2; }
+.md\:h-min					{ @include h-min; }
+.md\:h-max					{ @include h-max; }
+.md\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.md\:h-#{$i}				{ @include h-rem($i); }
+.md\:h-#{$i}x				{ @include h-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.lg\:h-#{$x}\/#{$y} 		{ @include h-percent($x, $y); }
+.lg\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
+
+}}
+.lg\:h-auto					{ @include h-auto; }
+.lg\:h-0					{ @include h-0; }
+.lg\:h-full					{ @extend .lg\:h-1\/1;}
+.lg\:h-half					{ @extend .lg\:h-1\/2; }
+.lg\:h-screen-full			{ @extend .lg\:h-screen-1\/1; }
+.lg\:h-screen-half			{ @extend .lg\:h-screen-1\/2; }
+.lg\:h-min					{ @include h-min; }
+.lg\:h-max					{ @include h-max; }
+.lg\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.lg\:h-#{$i}				{ @include h-rem($i); }
+.lg\:h-#{$i}x				{ @include h-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.xl\:h-#{$x}\/#{$y} 		{ @include h-percent($x, $y); }
+.xl\:h-screen-#{$x}\/#{$y} 	{ @include h-screen($x, $y); }
+
+}}
+.xl\:h-auto					{ @include h-auto; }
+.xl\:h-0					{ @include h-0; }
+.xl\:h-full					{ @extend .xl\:h-1\/1;}
+.xl\:h-half					{ @extend .xl\:h-1\/2; }
+.xl\:h-screen-full			{ @extend .xl\:h-screen-1\/1; }
+.xl\:h-screen-half			{ @extend .xl\:h-screen-1\/2; }
+.xl\:h-min					{ @include h-min; }
+.xl\:h-max					{ @include h-max; }
+.xl\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.xl\:h-#{$i}				{ @include h-rem($i); }
+.xl\:h-#{$i}x				{ @include h-em($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+@for $y from 1 through 12 	{
+@for $x from 1 through $y 	{
+
+.xxl\:h-#{$x}\/#{$y} 		{ @include h-percent($x, $y); }
+.xxl\:h-screen-#{$x}\/#{$y} { @include h-screen($x, $y); }
+
+}}
+.xxl\:h-auto				{ @include h-auto; }
+.xxl\:h-0					{ @include h-0; }
+.xxl\:h-full				{ @extend .xxl\:h-1\/1 ;}
+.xxl\:h-half				{ @extend .xxl\:h-1\/2; }
+.xxl\:h-screen-full			{ @extend .xxl\:h-screen-1\/1; }
+.xxl\:h-screen-half			{ @extend .xxl\:h-screen-1\/2; }
+.xxl\:h-min					{ @include h-min; }
+.xxl\:h-max					{ @include h-max; }
+.xxl\:h-fit					{ @include h-fit; }
+
+@for $i from 1 through 1000 {
+
+.xxl\:h-#{$i}				{ @include h-rem($i); }
+.xxl\:h-#{$i}x				{ @include h-em($i); }
+
+}
+
+}

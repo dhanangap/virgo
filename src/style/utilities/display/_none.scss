@@ -1,0 +1,91 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Display > None
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.hide						{ @include display-none; }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:hide					{ @include display-none; }
+.sm\:show					{ @include display-unset; }
+
+.md\:only					{ @include display-none; }
+.lg\:only					{ @include display-none; }
+.xl\:only					{ @include display-none; }
+.xxl\:only					{ @include display-none; }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:hide					{ @include display-none; }
+.md\:show					{ @include display-unset; }
+
+.sm\:only					{ @include display-none; }
+.lg\:only					{ @include display-none; }
+.xl\:only					{ @include display-none; }
+.xxl\:only					{ @include display-none; }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:hide					{ @include display-none; }
+.lg\:show					{ @include display-unset; }
+
+.sm\:only					{ @include display-none; }
+.md\:only					{ @include display-none; }
+.xl\:only					{ @include display-none; }
+.xxl\:only					{ @include display-none; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:hide					{ @include display-none; }
+.xl\:show					{ @include display-unset; }
+
+.sm\:only					{ @include display-none; }
+.md\:only					{ @include display-none; }
+.lg\:only					{ @include display-none; }
+.xxl\:only					{ @include display-none; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+.xxl\:hide					{ @include display-none; }
+.xxl\:show					{ @include display-unset; }
+
+.sm\:only					{ @include display-none; }
+.md\:only					{ @include display-none; }
+.lg\:only					{ @include display-none; }
+.xl\:only					{ @include display-none; }
+
+}

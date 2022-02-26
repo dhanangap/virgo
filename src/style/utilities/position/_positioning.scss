@@ -1,0 +1,217 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Position > Absolute
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+@for $i from 0 to 12 		{
+
+.top-#{$i}					{ @include top($i * 1rem); }
+.right-#{$i}				{ @include right($i * 1rem); }
+.bottom-#{$i}				{ @include bottom($i * 1rem); }
+.left-#{$i}					{ @include left($i * 1rem); }
+
+}
+
+@for $i from 1 through 12 	{
+@for $j from 1 through 12	{
+
+.top-screen-#{$i}\/#{$j}	{ @include top-screen($i,$j); }
+.right-screen-#{$i}\/#{$j}	{ @include right-screen($i,$j); }
+.bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
+.left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
+
+}}
+
+@for $i from 0 to 100 		{
+
+.top-#{$i}\%				{ @include top-percent($i); }
+.right-#{$i}\%				{ @include right-percent($i); }
+.bottom-#{$i}\%				{ @include bottom-percent($i); }
+.left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+@for $i from 0 to 12 		{
+
+.sm\:top-#{$i}				{ @include top($i * 1rem); }
+.sm\:right-#{$i}			{ @include right($i * 1rem); }
+.sm\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.sm\:left-#{$i}				{ @include left($i * 1rem); }
+
+}
+
+@for $i from 1 through 12 	{
+@for $j from 1 through 12	{
+
+.sm\:top-screen-#{$i}\/#{$j}	{ @include top-screen($i,$j); }
+.sm\:right-screen-#{$i}\/#{$j}	{ @include right-screen($i,$j); }
+.sm\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
+.sm\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
+
+}}
+
+@for $i from 0 to 100 		{
+
+.sm\:top-#{$i}\%				{ @include top-percent($i); }
+.sm\:right-#{$i}\%				{ @include right-percent($i); }
+.sm\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.sm\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+@for $i from 0 to 12 		{
+
+.md\:top-#{$i}				{ @include top($i * 1rem); }
+.md\:right-#{$i}			{ @include right($i * 1rem); }
+.md\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.md\:left-#{$i}				{ @include left($i * 1rem); }
+
+}
+
+@for $i from 1 through 12 	{
+@for $j from 1 through 12	{
+
+.md\:top-screen-#{$i}\/#{$j}	{ @include top-screen($i,$j); }
+.md\:right-screen-#{$i}\/#{$j}	{ @include right-screen($i,$j); }
+.md\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
+.md\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
+
+}}
+
+@for $i from 0 to 100 		{
+
+.md\:top-#{$i}\%				{ @include top-percent($i); }
+.md\:right-#{$i}\%				{ @include right-percent($i); }
+.md\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.md\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+@for $i from 0 to 12 		{
+
+.lg\:top-#{$i}				{ @include top($i * 1rem); }
+.lg\:right-#{$i}			{ @include right($i * 1rem); }
+.lg\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.lg\:left-#{$i}				{ @include left($i * 1rem); }
+
+}
+
+@for $i from 1 through 12 	{
+@for $j from 1 through 12	{
+
+.lg\:top-screen-#{$i}\/#{$j}	{ @include top-screen($i,$j); }
+.lg\:right-screen-#{$i}\/#{$j}	{ @include right-screen($i,$j); }
+.lg\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
+.lg\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
+
+}}
+
+@for $i from 0 to 100 		{
+
+.lg\:top-#{$i}\%				{ @include top-percent($i); }
+.lg\:right-#{$i}\%				{ @include right-percent($i); }
+.lg\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.lg\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+@for $i from 0 to 12 		{
+
+.xl\:top-#{$i}				{ @include top($i * 1rem); }
+.xl\:right-#{$i}			{ @include right($i * 1rem); }
+.xl\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.xl\:left-#{$i}				{ @include left($i * 1rem); }
+
+}
+
+@for $i from 1 through 12 	{
+@for $j from 1 through 12	{
+
+.xl\:top-screen-#{$i}\/#{$j}	{ @include top-screen($i,$j); }
+.xl\:right-screen-#{$i}\/#{$j}	{ @include right-screen($i,$j); }
+.xl\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
+.xl\:left-screen-#{$i}\/#{$j}	{ @include left-screen($i,$j); }
+
+}}
+
+@for $i from 0 to 100 		{
+
+.xl\:top-#{$i}\%				{ @include top-percent($i); }
+.xl\:right-#{$i}\%				{ @include right-percent($i); }
+.xl\:bottom-#{$i}\%				{ @include bottom-percent($i); }
+.xl\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )         {
+
+@for $i from 0 to 12 		{
+
+.xxl\:top-#{$i}				{ @include top($i * 1rem); }
+.xxl\:right-#{$i}			{ @include right($i * 1rem); }
+.xxl\:bottom-#{$i}			{ @include bottom($i * 1rem); }
+.xxl\:left-#{$i}			{ @include left($i * 1rem); }
+
+}
+
+@for $i from 1 through 12 	{
+@for $j from 1 through 12	{
+
+.xxl\:top-screen-#{$i}\/#{$j}		{ @include top-screen($i,$j); }
+.xxl\:right-screen-#{$i}\/#{$j}		{ @include right-screen($i,$j); }
+.xxl\:bottom-screen-#{$i}\/#{$j}	{ @include bottom-screen($i,$j); }
+.xxl\:left-screen-#{$i}\/#{$j}		{ @include left-screen($i,$j); }
+
+}}
+
+@for $i from 0 to 100 		{
+
+.xxl\:top-#{$i}\%				{ @include top-percent($i); }
+.xxl\:right-#{$i}\%				{ @include right-percent($i); }
+.xxl\:bottom-#{$i}\%			{ @include bottom-percent($i); }
+.xxl\:left-#{$i}\%				{ @include left-percent($i); }
+
+}
+
+}

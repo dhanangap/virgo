@@ -1,0 +1,107 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Whitespace > Padding
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+@for $i from 0 through 5       {
+
+// All
+.pa-#{$i}                       { @include padding($i); }
+// Horizontal (x-axis)
+.px-#{$i}                       { @include padding-left($i); @include padding-right($i); }
+// Vertical (y-axis)
+.py-#{$i}                       { @include padding-top($i); @include padding-bottom($i); }
+// Individual
+.pt-#{$i}                       { @include padding-top($i); }
+.pr-#{$i}                       { @include padding-right($i); }
+.pb-#{$i}                       { @include padding-bottom($i); }
+.pl-#{$i}                       { @include padding-left($i); }
+
+}
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+(max-width: calc($media-md - 1px)) 		{
+@for $i from 0 through 5		{
+
+.sm\:pa-#{$i}					{ @include padding($i); }
+.sm\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
+.sm\:py-#{$i}					{ @include padding-top($i); @include padding-bottom($i); }
+.sm\:pt-#{$i}					{ @include padding-top($i); }
+.sm\:pr-#{$i}					{ @include padding-right($i); }
+.sm\:pb-#{$i}					{ @include padding-bottom($i); }
+.sm\:pl-#{$i}					{ @include padding-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+@for $i from 0 through 5		{
+
+.md\:pa-#{$i}					{ @include padding($i); }
+.md\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
+.md\:py-#{$i}					{ @include padding-top($i); @include padding-bottom($i); }
+.md\:pt-#{$i}					{ @include padding-top($i); }
+.md\:pr-#{$i}					{ @include padding-right($i); }
+.md\:pb-#{$i}					{ @include padding-bottom($i); }
+.md\:pl-#{$i}					{ @include padding-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+@for $i from 0 through 5		{
+
+.lg\:pa-#{$i}					{ @include padding($i); }
+.lg\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
+.lg\:py-#{$i}					{ @include padding-top($i); @include padding-bottom($i); }
+.lg\:pt-#{$i}					{ @include padding-top($i); }
+.lg\:pr-#{$i}					{ @include padding-right($i); }
+.lg\:pb-#{$i}					{ @include padding-bottom($i); }
+.lg\:pl-#{$i}					{ @include padding-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+@for $i from 0 through 5		{
+
+.xl\:pa-#{$i}					{ @include padding($i); }
+.xl\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
+.xl\:py-#{$i}					{ @include padding-top($i); @include padding-bottom($i); }
+.xl\:pt-#{$i}					{ @include padding-top($i); }
+.xl\:pr-#{$i}					{ @include padding-right($i); }
+.xl\:pb-#{$i}					{ @include padding-bottom($i); }
+.xl\:pl-#{$i}					{ @include padding-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )             {
+@for $i from 0 through 5		{
+
+.xxl\:pa-#{$i}					{ @include padding($i); }
+.xxl\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
+.xxl\:py-#{$i}					{ @include padding-top($i); @include padding-bottom($i); }
+.xxl\:pt-#{$i}					{ @include padding-top($i); }
+.xxl\:pr-#{$i}					{ @include padding-right($i); }
+.xxl\:pb-#{$i}					{ @include padding-bottom($i); }
+.xxl\:pl-#{$i}					{ @include padding-left($i); }
+
+}}

@@ -1,0 +1,83 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Align
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-left							{ @include text-align(left); }
+.text-center						{ @include text-align(center); }
+.text-right							{ @include text-align(right); }
+.text-justify						{ @include text-align(justify); }
+.text-nowrap						{ @include text-nowrap; }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:text-left						{ @include text-align(left); }
+.sm\:text-center					{ @include text-align(center); }
+.sm\:text-right						{ @include text-align(right); }
+.sm\:text-justify					{ @include text-align(justify); }
+.sm\:text-nowrap					{ @include text-nowrap; }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:text-left						{ @include text-align(left); }
+.md\:text-center					{ @include text-align(center); }
+.md\:text-right						{ @include text-align(right); }
+.md\:text-justify					{ @include text-align(justify); }
+.md\:text-nowrap					{ @include text-nowrap; }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:text-left						{ @include text-align(left); }
+.lg\:text-center					{ @include text-align(center); }
+.lg\:text-right						{ @include text-align(right); }
+.lg\:text-justify					{ @include text-align(justify); }
+.lg\:text-nowrap					{ @include text-nowrap; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:text-left						{ @include text-align(left); }
+.xl\:text-center					{ @include text-align(center); }
+.xl\:text-right						{ @include text-align(right); }
+.xl\:text-justify					{ @include text-align(justify); }
+.xl\:text-nowrap					{ @include text-nowrap; }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )                 {
+
+.xxl\:text-left						{ @include text-align(left); }
+.xxl\:text-center					{ @include text-align(center); }
+.xxl\:text-right					{ @include text-align(right); }
+.xxl\:text-justify					{ @include text-align(justify); }
+.xxl\:text-nowrap					{ @include text-nowrap; }
+
+}

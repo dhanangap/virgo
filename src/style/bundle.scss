@@ -5,6 +5,7 @@
 
 @import "./defaults.scss";
 @import "./reset.scss";
+@import "./mixins.scss";
 
 // - Base
 @import "./base/link.scss";
@@ -16,6 +17,9 @@
 
 // - Core
 @import "./core.scss";
+
+// - Layout
+@import "./layout.scss";
 
 // - Components
 @import "./components.scss";

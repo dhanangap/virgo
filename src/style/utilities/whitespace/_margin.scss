@@ -1,0 +1,107 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Whitespace > Margin
+// ====================================================================
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+@for $i from 0 through 5       {
+
+// All
+.ma-#{$i}                       { @include margin($i); }
+// Horizontal (x-axis)
+.mx-#{$i}                       { @include margin-left($i); @include margin-right($i); }
+// Vertical (y-axis)
+.my-#{$i}                       { @include margin-top($i); @include margin-bottom($i); }
+// Individual
+.mt-#{$i}                       { @include margin-top($i); }
+.mr-#{$i}                       { @include margin-right($i); }
+.mb-#{$i}                       { @include margin-bottom($i); }
+.ml-#{$i}                       { @include margin-left($i); }
+
+}
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+(max-width: calc($media-md - 1px)) 		{
+@for $i from 0 through 5		{
+
+.sm\:ma-#{$i}					{ @include margin($i); }
+.sm\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
+.sm\:my-#{$i}					{ @include margin-top($i); @include margin-bottom($i); }
+.sm\:mt-#{$i}					{ @include margin-top($i); }
+.sm\:mr-#{$i}					{ @include margin-right($i); }
+.sm\:mb-#{$i}					{ @include margin-bottom($i); }
+.sm\:ml-#{$i}					{ @include margin-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+@for $i from 0 through 5		{
+
+.md\:ma-#{$i}					{ @include margin($i); }
+.md\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
+.md\:my-#{$i}					{ @include margin-top($i); @include margin-bottom($i); }
+.md\:mt-#{$i}					{ @include margin-top($i); }
+.md\:mr-#{$i}					{ @include margin-right($i); }
+.md\:mb-#{$i}					{ @include margin-bottom($i); }
+.md\:ml-#{$i}					{ @include margin-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+@for $i from 0 through 5		{
+
+.lg\:ma-#{$i}					{ @include margin($i); }
+.lg\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
+.lg\:my-#{$i}					{ @include margin-top($i); @include margin-bottom($i); }
+.lg\:mt-#{$i}					{ @include margin-top($i); }
+.lg\:mr-#{$i}					{ @include margin-right($i); }
+.lg\:mb-#{$i}					{ @include margin-bottom($i); }
+.lg\:ml-#{$i}					{ @include margin-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+@for $i from 0 through 5		{
+
+.xl\:ma-#{$i}					{ @include margin($i); }
+.xl\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
+.xl\:my-#{$i}					{ @include margin-top($i); @include margin-bottom($i); }
+.xl\:mt-#{$i}					{ @include margin-top($i); }
+.xl\:mr-#{$i}					{ @include margin-right($i); }
+.xl\:mb-#{$i}					{ @include margin-bottom($i); }
+.xl\:ml-#{$i}					{ @include margin-left($i); }
+
+}}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )             {
+@for $i from 0 through 5		{
+
+.xxl\:ma-#{$i}					{ @include margin($i); }
+.xxl\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
+.xxl\:my-#{$i}					{ @include margin-top($i); @include margin-bottom($i); }
+.xxl\:mt-#{$i}					{ @include margin-top($i); }
+.xxl\:mr-#{$i}					{ @include margin-right($i); }
+.xxl\:mb-#{$i}					{ @include margin-bottom($i); }
+.xxl\:ml-#{$i}					{ @include margin-left($i); }
+
+}}

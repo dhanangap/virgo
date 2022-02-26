@@ -1,0 +1,67 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Text > Decoration
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.text-decoration-none				{ @include text-decoration(none); }
+.text-underline						{ @include text-decoration(underline); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:text-decoration-none			{ @include text-decoration(none); }
+.sm\:text-underline					{ @include text-decoration(underline); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:text-decoration-none			{ @include text-decoration(none); }
+.md\:text-underline					{ @include text-decoration(underline); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:text-decoration-none			{ @include text-decoration(none); }
+.lg\:text-underline					{ @include text-decoration(underline); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:text-decoration-none			{ @include text-decoration(none); }
+.xl\:text-underline					{ @include text-decoration(underline); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )                 {
+
+.xxl\:text-decoration-none			{ @include text-decoration(none); }
+.xxl\:text-underline				{ @include text-decoration(underline); }
+
+}

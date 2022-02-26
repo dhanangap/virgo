@@ -2,3 +2,12 @@
 // - Virgo Library
 // - Utility Classes
 // ================================================================================================
+
+@import "./defaults.scss";
+@import "./mixins.scss";
+
+@import "./utilities/whitespace/margin.scss";
+@import "./utilities/whitespace/padding.scss";
+
+@import "./utilities/text/align.scss";
+@import "./utilities/text/size.scss";

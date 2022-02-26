@@ -1,0 +1,67 @@
+// ====================================================================
+// - Virgo Utility Class
+// - Background > Backdrop
+// ====================================================================
+
+@import "../../mixins.scss";
+
+// --------------------------------------------------------------------
+// * Default Classes
+// --------------------------------------------------------------------
+
+.bg-backdrop-dark					{ @include backdrop(#000); }
+.bg-backdrop-light					{ @include backdrop(#fff); }
+
+// --------------------------------------------------------------------
+// * Small Screen
+// --------------------------------------------------------------------
+@media screen and
+( max-width: calc($media-md - 1px) )	{
+
+.sm\:bg-backdrop-dark				{ @include backdrop(#000); }
+.sm\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Medium Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-md ) and
+( max-width: calc($media-lg - 1px) )	{
+
+.md\:bg-backdrop-dark				{ @include backdrop(#000); }
+.md\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-lg ) and
+( max-width: calc($media-xl - 1px) )	{
+
+.lg\:bg-backdrop-dark				{ @include backdrop(#000); }
+.lg\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xl ) and
+( max-width: calc($media-xxl - 1px) )	{
+
+.xl\:bg-backdrop-dark				{ @include backdrop(#000); }
+.xl\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
+// --------------------------------------------------------------------
+// * Extra-Extra-Large Screen
+// --------------------------------------------------------------------
+@media screen and
+( min-width: $media-xxl )                 {
+
+.xxl\:bg-backdrop-dark				{ @include backdrop(#000); }
+.xxl\:bg-backdrop-light				{ @include backdrop(#fff); }
+
+}
