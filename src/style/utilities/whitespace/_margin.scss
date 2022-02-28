@@ -7,7 +7,7 @@
 // * Default Classes
 // --------------------------------------------------------------------
 
-@for $i from 0 through 5       {
+@for $i from 0 through 10       {
 
 // All
 .ma-#{$i}                       { @include margin($i); }
@@ -27,7 +27,7 @@
 // --------------------------------------------------------------------
 @media screen and
 (max-width: calc($media-md - 1px)) 		{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .sm\:ma-#{$i}					{ @include margin($i); }
 .sm\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
@@ -44,7 +44,7 @@
 @media screen and
 ( min-width: $media-md ) and
 ( max-width: calc($media-lg - 1px) )	{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .md\:ma-#{$i}					{ @include margin($i); }
 .md\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
@@ -61,7 +61,7 @@
 @media screen and
 ( min-width: $media-lg ) and
 ( max-width: calc($media-xl - 1px) )	{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .lg\:ma-#{$i}					{ @include margin($i); }
 .lg\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
@@ -78,7 +78,7 @@
 @media screen and
 ( min-width: $media-xl ) and
 ( max-width: calc($media-xxl - 1px) )	{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .xl\:ma-#{$i}					{ @include margin($i); }
 .xl\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }
@@ -94,7 +94,7 @@
 // --------------------------------------------------------------------
 @media screen and
 ( min-width: $media-xxl )             {
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .xxl\:ma-#{$i}					{ @include margin($i); }
 .xxl\:mx-#{$i}					{ @include margin-left($i); @include margin-right($i); }

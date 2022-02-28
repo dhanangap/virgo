@@ -7,7 +7,7 @@
 // * Default Classes
 // --------------------------------------------------------------------
 
-@for $i from 0 through 5       {
+@for $i from 0 through 10       {
 
 // All
 .pa-#{$i}                       { @include padding($i); }
@@ -27,7 +27,7 @@
 // --------------------------------------------------------------------
 @media screen and
 (max-width: calc($media-md - 1px)) 		{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .sm\:pa-#{$i}					{ @include padding($i); }
 .sm\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
@@ -44,7 +44,7 @@
 @media screen and
 ( min-width: $media-md ) and
 ( max-width: calc($media-lg - 1px) )	{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .md\:pa-#{$i}					{ @include padding($i); }
 .md\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
@@ -61,7 +61,7 @@
 @media screen and
 ( min-width: $media-lg ) and
 ( max-width: calc($media-xl - 1px) )	{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .lg\:pa-#{$i}					{ @include padding($i); }
 .lg\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
@@ -78,7 +78,7 @@
 @media screen and
 ( min-width: $media-xl ) and
 ( max-width: calc($media-xxl - 1px) )	{
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .xl\:pa-#{$i}					{ @include padding($i); }
 .xl\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
@@ -94,7 +94,7 @@
 // --------------------------------------------------------------------
 @media screen and
 ( min-width: $media-xxl )             {
-@for $i from 0 through 5		{
+@for $i from 0 through 10		{
 
 .xxl\:pa-#{$i}					{ @include padding($i); }
 .xxl\:px-#{$i}					{ @include padding-left($i); @include padding-right($i); }
