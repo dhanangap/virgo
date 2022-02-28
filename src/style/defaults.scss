@@ -21,6 +21,7 @@ $media-xxl	: 1536px;
 	--color-text			: #3A3F41;
 	--color-text-lighter	: #4e5052;
 	--color-text-light		: #767c80;
+	--color-text-invert		: #dfe6eb;
 	// - Accent Color
 	--color-accent			: #1899F6;
 	--color-accent-lighter	: #28a0f5;
@@ -45,11 +46,11 @@ $media-xxl	: 1536px;
 	--color-shade-lighter	: #f9f9fa;
 	--color-shade-light		: #eef1f5;
 	--color-shade-darker	: #b8babd;
-	--color-shade-dark		: #e1e4e7;
+	--color-shade-dark		: #3c3d3f;
 	// Border Color
 	--color-border			: #767c80;
 	--color-border-lighter	: #8d9397;
-	--color-border-light	: #abb1b4;
+	--color-border-light	: #d2d8db;
 	--color-border-darker	: #676b6e;
 	--color-border-dark		: #4d5153;
 
@@ -63,7 +64,7 @@ $media-xxl	: 1536px;
 
 	// [ Dimension ] ------------------------------------------------------------------------------
 	// - Base Dimension
-	--roundness 	: 0.4rem;
+	--roundness 	: 0.6rem;
 	--spacing		: 1rem;
 	
 	// [ Transition ] -----------------------------------------------------------------------------

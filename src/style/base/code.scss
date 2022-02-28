@@ -1,0 +1,9 @@
+code {
+	padding: calc(var(--spacing) * 0.5);
+	display: inline;
+	vertical-align: middle;
+	font-family:  var(--font-mono);
+	font-size: 0.9em;
+	background-color: var(--color-shade);
+	border-radius: var(--roundness);
+}
