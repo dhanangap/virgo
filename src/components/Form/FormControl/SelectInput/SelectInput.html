@@ -1,0 +1,8 @@
+<div class="input select" tabindex="0">
+	{% if selected %}
+	<span class="selected-option">{{ selected.label }}</span>
+	{% else %}
+	<span class="placeholder">{{ placeholder }}</span>
+	{% endif %}
+	<span class="icon">expand_more</span>
+</div>

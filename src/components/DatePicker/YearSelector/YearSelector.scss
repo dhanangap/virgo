@@ -1,0 +1,21 @@
+.year-selector-page {
+	padding: var(--spacing);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, var(--input-height));
+	gap: calc(var(--spacing) * 0.5);
+	text-align: center;
+
+	button {
+		// --button-bg-color: transparent;
+		width: 100%;
+	}
+	button.selected {
+		--button-text-color: var(--color-accent-invert);
+		--button-text-color-hover: var(--color-accent-invert);
+		--button-bg-color: var(--color-accent);
+		--button-bg-color-hover: var(--color-accent-lighter);
+		--button-bg-color-active: var(--color-accent-darker);
+	}
+
+}

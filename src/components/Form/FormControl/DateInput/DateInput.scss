@@ -1,0 +1,27 @@
+.form-control.input-date {
+
+	.date {
+		position: relative;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+
+		.placeholder {
+			color: var(--color-text-light);
+		}
+
+		.icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: var(--input-height);
+			height: 100%;
+			padding: 0;
+			font-size: 2rem;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+}

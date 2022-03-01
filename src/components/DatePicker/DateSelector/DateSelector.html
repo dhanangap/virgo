@@ -1,0 +1,34 @@
+<div class="date-selector-page page">
+
+
+	<div class="day">Mon</div>
+	<div class="day">Tue</div>
+	<div class="day">Wed</div>
+	<div class="day">Thu</div>
+	<div class="day">Fri</div>
+	<div class="day">Sat</div>
+	<div class="day">Sun</div>
+	
+	{% for date in previousDates %}
+	<div class="date previous">
+		<button role="button" class="circle">{{ date.date }}</button>
+	</div>
+	{% endfor %}
+	
+	{% for date in dates %}
+	<div class="date">
+		{% if date.isEqual(selectedDate) %}
+		<button role="button" data-date="{{ date.date }}" data-month="{{ date.month }}" data-year="{{ date.year }}" class="circle selected">{{ date.date }}</button>
+		{% else %}
+		<button role="button" data-date="{{ date.date }}" data-month="{{ date.month }}" data-year="{{ date.year }}" class="circle">{{ date.date }}</button>
+		{% endif %}
+	</div>
+	{% endfor %}
+
+	{% for date in nextDates %}
+	<div class="date next">
+		<button role="button" class="circle">{{ date.date }}</button>
+	</div>
+	{% endfor %}
+
+</div>

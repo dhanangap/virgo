@@ -1,0 +1,13 @@
+<div class="month-selector-page page">
+	{% for month in months %}
+	{% if (selectedMonth.month === month.month) and (selectedMonth.year === month.year) %}
+	<div class="month">
+		<button role="button" class="selected" data-month="{{ month.month }}" data-year="{{ month.year }}">{{ month.format("MM") }}</button>
+	</div>
+	{% else %}
+	<div class="month">
+		<button role="button" data-month="{{ month.month }}" data-year="{{ month.year }}">{{ month.format("MM") }}</button>
+	</div>
+	{% endif %}
+	{% endfor %}
+</div>

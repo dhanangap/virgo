@@ -1,0 +1,83 @@
+.form-control.input-select {
+
+	.select {
+		position: relative;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+
+		.placeholder {
+			color: var(--color-text-light);
+		}
+
+		.icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: calc(var(--input-height) - 1rem);
+			height: 100%;
+			padding: 0;
+			font-size: 2rem;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+.input-select-options {
+	width: 100%;
+	padding: var(--spacing) 0;
+	border-radius: var(--roundness);
+	border: 1px solid var(--color-shade);
+	box-shadow: 0 2px 6px var(--color-shade-lighter);
+	background-color: var(--color-bg);
+
+	.no-options {
+		padding: var(--spacing);
+		color: var(--color-text-light);
+		font-size: italic;
+		font-size: 0.9em;
+	}
+
+	.option {
+		position: relative;
+		width: 100%;
+		height: var(--input-height);
+		padding: 0 var(--spacing);
+		color: var(--color-text);
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+
+		&:hover {
+			background-color: var(--color-shade-lighter);
+		}
+		
+		&:active {
+			background-color: var(--color-shade-darker);
+		}
+
+		&.selected {
+			font-weight: bold;
+			
+			&::after {
+				content: "check";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: var(--input-height);
+				height: var(--input-height);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				line-height: 1;
+				font-family: var(--font-icon);
+			}
+		}
+
+	}
+}

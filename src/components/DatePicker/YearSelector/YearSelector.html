@@ -1,0 +1,13 @@
+<div class="year-selector-page page">
+	{% for year in years %}
+	{% if (selectedYear.year === year.year) %}
+	<div class="year">
+		<button role="button" class="selected" data-year="{{ year.year }}">{{ year.format("yyyy") }}</button>
+	</div>
+	{% else %}
+	<div class="year">
+		<button role="button" data-year="{{ year.year }}">{{ year.format("yyyy") }}</button>
+	</div>
+	{% endif %}
+	{% endfor %}
+</div>

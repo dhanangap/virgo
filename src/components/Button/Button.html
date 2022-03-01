@@ -1,0 +1,14 @@
+<button class="{{ classes.join(' ') }}" type="button">
+	{% if leftIcon %}
+	<span class="icon left">{{ leftIcon }}</span>
+	{% endif %}
+	{% if icon %}
+	<span class="icon single">{{ icon }}</span>
+	{% endif %}
+	{% if label %}
+	<span class="label">{{ label }}</span>
+	{% endif %}
+	{% if rightIcon %}
+	<span class="icon right">{{ rightIcon }}</span>
+	{% endif %}
+</button>

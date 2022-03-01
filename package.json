@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/dhanangap/virgo#readme",
   "devDependencies": {
+    "@types/nunjucks": "^3.2.1",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.17",
     "html-loader": "^3.1.0",
@@ -36,5 +37,8 @@
     "typescript": "^4.5.5",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.3"
   }
 }

@@ -1,0 +1,39 @@
+.form-control {
+
+	--top-spacing: calc(1em + 1rem);
+
+	position: relative;
+	padding-top: var(--top-spacing);
+	margin-bottom: 2rem;
+
+	input, textarea, select, .control {
+		width: 100%;
+		transition: var(--transition);
+	}
+
+	label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 1em;
+		line-height: 1;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	transition: var(--transition);
+
+	&:active {
+		opacity: 0.75;
+		transition-duration: 0s;
+	}
+}
+
+@import "./PasswordInput/PasswordInput.scss";
+@import "./SearchInput/SearchInput.scss";
+@import "./SelectInput/SelectInput.scss";
+@import "./DateInput/DateInput.scss";
+@import "./RadioInput/RadioInput.scss";
+@import "./CheckboxInput/CheckboxInput.scss";

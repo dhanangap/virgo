@@ -1,0 +1,15 @@
+.form-control.input-search {
+
+	input {
+		padding-right: 4rem;
+	}
+
+	button {
+		--button-text-color-hover: var(--color-accent);
+
+		position: absolute;
+		top: var(--top-spacing, 0);
+		right: 0;
+	}
+
+}

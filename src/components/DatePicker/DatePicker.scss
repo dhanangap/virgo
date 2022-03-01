@@ -1,0 +1,80 @@
+.datepicker {
+
+	position: relative;
+	width: calc((var(--spacing) * 2) + (var(--input-height) * 7) + (var(--spacing) * (3)));
+	border: 1px solid var(--color-shade);
+	border-radius: var(--roundness);
+	background-color: var(--color-bg);
+	overflow: hidden;
+	
+	.pages {
+		overflow: hidden;
+	}
+
+	// Page
+	.page {
+		> header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: var(--spacing);
+
+			button {
+				--button-bg-color: transparent;
+			}
+		}
+	}
+
+	// Picker Page
+	.page.picker {
+		
+		> .calendar {
+			padding: var(--spacing);
+			display: grid;
+			grid-template-columns: repeat(7, var(--input-height));
+			grid-template-rows: min-content repeat(5, var(--input-height));
+			gap: calc(var(--spacing) * 0.5);
+			text-align: center;
+
+			.day {
+				padding-bottom: var(--spacing);
+				font-size: 0.875em;
+				font-weight: 500;
+				color: var(--color-text-light);
+			}
+
+		}
+	}
+
+	// Month Selector Page
+	.page.month-selector {
+		overflow: hidden;
+		.page-month {
+			padding: var(--spacing);
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(6, var(--input-height));
+			gap: calc(var(--spacing) * 0.5);
+		}
+	}
+
+	// Year Selector Page
+	.page.year-selector {
+		.page-year {
+			padding: var(--spacing);
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(6, var(--input-height));
+			gap: calc(var(--spacing) * 0.5);
+		}
+	}
+
+}
+
+.popper .datepicker {
+	box-shadow: 0 2px 6px var(--color-shade-lighter);
+}
+
+@import "./DateSelector/DateSelector.scss";
+@import "./MonthSelector/MonthSelector.scss";
+@import "./YearSelector/YearSelector.scss";

@@ -1,0 +1,90 @@
+.form-control.input-checkbox {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+
+	label {
+		position: relative;
+		margin: 0;
+		font-size: max(0.94em, 1.6rem);
+		cursor: pointer;
+	}
+}
+
+input[type="checkbox"] {
+	flex-shrink: 0;
+	flex-grow: 0;
+	position: relative;
+	width: calc(var(--input-height) - 2rem);
+	height: calc(var(--input-height) - 2rem);
+	min-width: calc(var(--input-height) - 2rem);
+	margin: 0 1rem 0 0;
+	padding: 0;
+
+	appearance: none;
+	border-radius: var(--roundness);
+	border: 0.2rem solid var(--color-border);
+	background-color: transparent;
+	cursor: pointer;
+
+	&:not(.switch):checked {
+		border-color: var(--color-accent);
+		background-color: var(--color-accent);
+
+		&::after {
+			content: "check";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			font-family: var(--font-icon);
+			color: var(--color-accent-invert);
+			line-height: 100%;
+			font-size: max(0.94em, 1.6rem);
+		}
+	}
+
+	&:active {
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+input[type="checkbox"].switch {
+
+	width: calc(var(--input-height) * 0.8);
+	height: calc(var(--input-height) - 2rem);
+	background-color: var(--color-border);
+	border: none;
+	border-radius: calc((var(--input-height) - 2rem) * 0.5);
+	transition: var(--transition);
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0.2rem;
+		left: 0.2rem;
+		width: calc(var(--input-height) - 2.4rem);
+		height: calc(var(--input-height) - 2.4rem);
+		border-radius: 50%;
+		background-color: var(--color-bg);
+		border: none;
+		transform: translate3d(0,0,0);
+		transition: var(--transition);
+	}
+
+	&:checked {
+		background-color: var(--color-accent);
+
+		&::after {
+			transform: translate3d(calc(var(--input-height) * 0.8 - 2rem),0,0);
+		}
+	}
+
+}

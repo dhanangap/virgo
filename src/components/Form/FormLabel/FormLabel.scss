@@ -1,0 +1,10 @@
+form label {
+	display: block;
+	margin-bottom: 1rem;
+	color: var(--color-text);
+	user-select: none;
+
+	&:active {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
