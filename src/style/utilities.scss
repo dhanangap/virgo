@@ -9,5 +9,12 @@
 @import "./utilities/whitespace/margin.scss";
 @import "./utilities/whitespace/padding.scss";
 
+@import "./utilities/dimension/height-max.scss";
+@import "./utilities/dimension/height-min.scss";
+@import "./utilities/dimension/height.scss";
+@import "./utilities/dimension/width-max.scss";
+@import "./utilities/dimension/width-min.scss";
+@import "./utilities/dimension/width.scss";
+
 @import "./utilities/text/align.scss";
 @import "./utilities/text/size.scss";

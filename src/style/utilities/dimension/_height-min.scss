@@ -3,8 +3,6 @@
 // - Dimension > Minimum Height
 // ====================================================================
 
-@import "../../mixins.scss";
-
 // --------------------------------------------------------------------
 // * Default Classes
 // --------------------------------------------------------------------
@@ -12,7 +10,7 @@
 // Zero height
 .hmin-0						{ @include hmin-0; }
 // Percentage and viewport
-@for $y from 1 through 12	{
+@for $y from 1 through 10	{
 @for $x from 1 through $y	{
 
 .hmin-#{$x}\/#{$y} 			{ @include hmin-percent($x, $y); }
@@ -38,7 +36,7 @@
 @media screen and
 ( max-width: calc($media-md - 1px) )	    {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .sm\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
@@ -66,7 +64,7 @@
 ( min-width: $media-md ) and
 ( max-width: calc($media-lg - 1px) )	    {
 
-@for $y from 1 through 12	    {
+@for $y from 1 through 10	    {
 @for $x from 1 through $y	    {
 
 .md\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
@@ -94,7 +92,7 @@
 ( min-width: $media-lg ) and
 ( max-width: calc($media-xl - 1px) )	    {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .lg\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
@@ -122,7 +120,7 @@
 ( min-width: $media-xl ) and
 ( max-width: calc($media-xxl - 1px) )	    {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .xl\:hmin-#{$x}\/#{$y} 		    { @include hmin-percent($x, $y); }
@@ -149,7 +147,7 @@
 @media screen and
 ( min-width: $media-xxl )             {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .xxl\:hmin-#{$x}\/#{$y} 		{ @include hmin-percent($x, $y); }

@@ -3,8 +3,6 @@
 // - Dimension > Minimum Width
 // ====================================================================
 
-@import "../../mixins.scss";
-
 // --------------------------------------------------------------------
 // * Default Classes
 // --------------------------------------------------------------------
@@ -12,7 +10,7 @@
 // Zero height
 .wmin-0						{ @include wmin-0; }
 // Percentage and viewport
-@for $y from 1 through 12	{
+@for $y from 1 through 10	{
 @for $x from 1 through $y	{
 
 .wmin-#{$x}\/#{$y} 			{ @include wmin-percent($x, $y); }
@@ -39,7 +37,7 @@
 @media screen and
 ( max-width: calc($media-md - 1px) )	    {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .sm\:wmin-#{$x}\/#{$y} 		    { @include wmin-percent($x, $y); }
@@ -67,7 +65,7 @@
 ( min-width: $media-md ) and
 ( max-width: calc($media-lg - 1px) )	    {
 
-@for $y from 1 through 12	    {
+@for $y from 1 through 10	    {
 @for $x from 1 through $y	    {
 
 .md\:wmin-#{$x}\/#{$y} 		    { @include wmin-percent($x, $y); }
@@ -95,7 +93,7 @@
 ( min-width: $media-lg ) and
 ( max-width: calc($media-xl - 1px) )	    {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .lg\:wmin-#{$x}\/#{$y} 		    { @include wmin-percent($x, $y); }
@@ -123,7 +121,7 @@
 ( min-width: $media-xl ) and
 ( max-width: calc($media-xxl - 1px) )	    {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .xl\:wmin-#{$x}\/#{$y} 		    { @include wmin-percent($x, $y); }
@@ -150,7 +148,7 @@
 @media screen and
 ( min-width: $media-xxl )             {
 
-@for $y from 1 through 12 	    {
+@for $y from 1 through 10 	    {
 @for $x from 1 through $y 	    {
 
 .xxl\:wmin-#{$x}\/#{$y} 		{ @include wmin-percent($x, $y); }
