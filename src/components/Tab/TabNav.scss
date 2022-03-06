@@ -1,0 +1,39 @@
+.tab .tab-nav {
+	
+	box-shadow: inset 0 -2px 0 var(--tab-nav-bg, var(--color-shade-2));
+	margin-bottom: calc(var(--spacing) * 2);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	
+	&[data-align="center"] {
+		justify-content: center;
+	}
+	&[data-align="right"] {
+		justify-content: flex-end;
+	}
+	&[data-align="left"] {
+		justify-content: flex-start;
+	}
+
+	button {
+		background-color: transparent;
+		border-radius: var(--roundness) var(--roundness) 0 0;
+		box-shadow: inset 0 -2px 0 var(--color-shade-2);
+		
+		&:hover {
+			background-color: var(--color-shade-1);
+		}
+		
+		&:active {
+			background-color: var(--color-shade-2);
+		}
+		
+		&.active {
+			box-shadow: inset 0 -4px 0 var(--color-accent);
+		}
+	}
+	
+}
