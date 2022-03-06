@@ -1,6 +1,6 @@
 {
   "name": "@bahtera/virgo",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Virgo is a JavaScript library built to help developing modern web applications faster and easier.",
   "main": "index.js",
   "scripts": {
