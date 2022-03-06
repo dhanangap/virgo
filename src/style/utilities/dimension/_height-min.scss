@@ -23,12 +23,6 @@
 .hmin-screen-full			{ @extend .hmin-screen-1\/1; }
 .hmin-screen-half			{ @extend .hmin-screen-1\/2; }
 
-@for $i from 1 through 1000 {
-
-.hmin-#{$i}					{ @include h-min-rem($i); }
-.hmin-#{$i}x				{ @include h-min-em($i); }
-
-}
 
 // --------------------------------------------------------------------
 // * Small Screen
@@ -49,12 +43,6 @@
 .sm\:hmin-screen-full			{ @extend .sm\:hmin-screen-1\/1; }
 .sm\:hmin-screen-half			{ @extend .sm\:hmin-screen-1\/2; }
 
-@for $i from 1 through 1000 {
-
-.sm\:hmin-#{$i}					{ @include h-min-rem($i); }
-.sm\:hmin-#{$i}x				{ @include h-min-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -77,12 +65,6 @@
 .md\:hmin-screen-full			{ @extend .md\:hmin-screen-1\/1; }
 .md\:hmin-screen-half			{ @extend .md\:hmin-screen-1\/2; }
 
-@for $i from 1 through 1000 {
-
-.md\:hmin-#{$i}					{ @include h-min-rem($i); }
-.md\:hmin-#{$i}x				{ @include h-min-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -105,12 +87,6 @@
 .lg\:hmin-screen-full			{ @extend .lg\:hmin-screen-1\/1; }
 .lg\:hmin-screen-half			{ @extend .lg\:hmin-screen-1\/2; }
 
-@for $i from 1 through 1000 {
-
-.lg\:hmin-#{$i}					{ @include h-min-rem($i); }
-.lg\:hmin-#{$i}x				{ @include h-min-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -133,12 +109,6 @@
 .xl\:hmin-screen-full			{ @extend .xl\:hmin-screen-1\/1; }
 .xl\:hmin-screen-half			{ @extend .xl\:hmin-screen-1\/2; }
 
-@for $i from 1 through 1000 {
-
-.xl\:hmin-#{$i}					{ @include h-min-rem($i); }
-.xl\:hmin-#{$i}x				{ @include h-min-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -160,11 +130,5 @@
 .xxl\:hmin-screen-full			{ @extend .xxl\:hmin-screen-1\/1; }
 .xxl\:hmin-screen-half			{ @extend .xxl\:hmin-screen-1\/2; }
 
-@for $i from 1 through 1000 {
-
-.xxl\:hmin-#{$i}				{ @include h-min-rem($i); }
-.xxl\:hmin-#{$i}x				{ @include h-min-em($i); }
-
-}
 
 }

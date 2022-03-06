@@ -16,5 +16,27 @@
 @import "./utilities/dimension/width-min.scss";
 @import "./utilities/dimension/width.scss";
 
+@import "./utilities/display/block.scss";
+@import "./utilities/display/flex.scss";
+@import "./utilities/display/none.scss";
+@import "./utilities/display/overflow.scss";
+
+@import "./utilities/background/backdrop.scss";
+@import "./utilities/background/color.scss";
+
+@import "./utilities/clip/path.scss";
+
+@import "./utilities/filter/opacity.scss";
+
+@import "./utilities/position/absolute.scss";
+@import "./utilities/position/positioning.scss";
+@import "./utilities/position/relative.scss";
+
 @import "./utilities/text/align.scss";
 @import "./utilities/text/size.scss";
+@import "./utilities/text/color.scss";
+@import "./utilities/text/decoration.scss";
+@import "./utilities/text/line.scss";
+@import "./utilities/text/size.scss";
+@import "./utilities/text/transform.scss";
+@import "./utilities/text/weight.scss";

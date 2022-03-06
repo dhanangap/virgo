@@ -28,14 +28,6 @@
 .w-max						{ @include w-max; }
 .w-fit						{ @include w-fit; }
 
-// Rem, em-based
-@for $i from 1 through 1000 {
-
-.w-#{$i}					{ @include w-rem($i); }
-.w-#{$i}x					{ @include w-em($i); }
-
-}
-
 // --------------------------------------------------------------------
 // * Small Screen
 // --------------------------------------------------------------------
@@ -59,12 +51,6 @@
 .sm\:w-max					{ @include w-max; }
 .sm\:w-fit					{ @include w-fit; }
 
-@for $i from 1 through 1000 {
-
-.sm\:w-#{$i}				{ @include w-rem($i); }
-.sm\:w-#{$i}x				{ @include w-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -91,12 +77,6 @@
 .md\:w-max					{ @include w-max; }
 .md\:w-fit					{ @include w-fit; }
 
-@for $i from 1 through 1000 {
-
-.md\:w-#{$i}				{ @include w-rem($i); }
-.md\:w-#{$i}x				{ @include w-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -123,12 +103,6 @@
 .lg\:w-max					{ @include w-max; }
 .lg\:w-fit					{ @include w-fit; }
 
-@for $i from 1 through 1000 {
-
-.lg\:w-#{$i}				{ @include w-rem($i); }
-.lg\:w-#{$i}x				{ @include w-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -155,12 +129,6 @@
 .xl\:w-max					{ @include w-max; }
 .xl\:w-fit					{ @include w-fit; }
 
-@for $i from 1 through 1000 {
-
-.xl\:w-#{$i}				{ @include w-rem($i); }
-.xl\:w-#{$i}x				{ @include w-em($i); }
-
-}
 
 }
 // --------------------------------------------------------------------
@@ -186,11 +154,5 @@
 .xxl\:w-max					{ @include w-max; }
 .xxl\:w-fit					{ @include w-fit; }
 
-@for $i from 1 through 1000 {
-
-.xxl\:w-#{$i}				{ @include w-rem($i); }
-.xxl\:w-#{$i}x				{ @include w-em($i); }
-
-}
 
 }
