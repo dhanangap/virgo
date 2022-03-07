@@ -23,8 +23,8 @@ export default class Scrollspy extends Component {
 	 */
 	constructor (element: HTMLElement | Element, config?: ComponentConfig) {
 		super(element);
-		this.targetElement = this.element.dataset["target"] ? document.querySelector(this.element.dataset["target"]) : document.body;
-		this.targetElement = this.targetElement ? this.targetElement : document.body;
+		this.targetElement = this.element.dataset["target"] ? document.querySelector(this.element.dataset["target"]) : document.querySelector("html");
+		this.targetElement = this.targetElement ? this.targetElement : document.querySelector("html");
 		
 		this.currentId = null;
 		this.targetIds = this.extractTargetIds();
