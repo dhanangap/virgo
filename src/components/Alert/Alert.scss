@@ -1,12 +1,10 @@
 .alert {
 
 	--bg-color: var(--color-shade-lighter);
-	--border-color: var(--color-border);
 	--message-color: var(--color-text);
 
 	margin-bottom: 2rem;
 	padding: var(--spacing);
-	border: 1px solid var(--border-color);
 	background-color: var(--bg-color);
 	color: var(--message-color);
 	font-size: 0.9em;
@@ -14,12 +12,10 @@
 
 	&.danger {
 		--bg-color: var(--color-danger-light);
-		--border-color: var(--color-danger);
 	}
 
 	&.success {
 		--bg-color: var(--color-success-light);
-		--border-color: var(--color-success);
 	}
 
 }
