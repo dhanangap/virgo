@@ -1,22 +1,21 @@
 .alert {
 
-	--bg-color: var(--color-shade-light);
-	--message-color: var(--color-text);
+	--border-color: var(--color-shade);
+	--message-color: var(--color-text-lighter);
 
 	margin-bottom: 2rem;
-	padding: var(--spacing);
-	background-color: var(--bg-color);
+	padding: var(--spacing) calc(var(--spacing) * 2);
+	box-shadow: inset 4px 0 0 var(--border-color);
 	color: var(--message-color);
 	font-size: 0.9em;
 	line-height: 1.3;
-	border-radius: calc(var(--roundness) * 0.5);
 
 	&.danger {
-		--bg-color: var(--color-danger-light);
+		--border-color: var(--color-danger-lighter);
 	}
 
 	&.success {
-		--bg-color: var(--color-success-light);
+		--border-color: var(--color-success-lighter);
 	}
 
 }
