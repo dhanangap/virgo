@@ -49,6 +49,11 @@ export default class FormControl extends Component {
 			}
 		}
 
+		// Autofocus
+		if (this.element.hasAttribute("autofocus")) {
+			this.element.focus();
+		}
+
 		// Container
 		this.initContainer();
 		// Label
