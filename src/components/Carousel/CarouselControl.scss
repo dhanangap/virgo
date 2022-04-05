@@ -1,0 +1,60 @@
+.slider-control	{
+	
+	&.navigation {
+		
+		button.back, button.forward {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: auto;
+
+			border-radius: 0;
+			background-color: transparent;
+			color: #fff;
+			font-size: 2em;
+		}
+
+		button.back {
+			left: 0;
+		}
+
+		button.forward {
+			right: 0;
+		}
+
+	}
+
+	&.indicator {
+		position: absolute;
+		bottom: calc(var(--spacing) * 3);
+		left: 50%;
+		transform: translateX(-50%);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		button {
+			width: 1.2rem;
+			height: 1.2rem;
+			margin: 0 0.5rem;
+			padding: 0;
+			border-radius: 50%;
+			background-color: var(--color-bg);
+			opacity: 0.3;
+			color: transparent;
+
+			&:hover {
+				opacity: 0.6;
+			}
+			
+			&:active {
+				opacity: 0.4;
+			}
+			
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+}

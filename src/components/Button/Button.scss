@@ -39,6 +39,7 @@ button, a.button {
 		border-radius: var(--roundness);
 
 		cursor: pointer;
+		white-space: nowrap;
 		-webkit-tap-highlight-color: transparent;
 	}
 

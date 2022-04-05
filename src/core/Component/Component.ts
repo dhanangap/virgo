@@ -35,6 +35,7 @@ export default class Component {
 	 * @returns total number of instances created.
 	 */
 	static init(selector?: string, config: ComponentConfig = ComponentConfigDefaults): number {
+		
 		// If autoCreateInstances config is true, create instances from selected elements on the page.
 		if (this.config.autoCreateInstances) {
 			const elements = document.querySelectorAll(selector ? selector : this.defaultSelector);

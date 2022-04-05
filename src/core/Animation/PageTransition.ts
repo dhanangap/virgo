@@ -21,6 +21,13 @@ export default class PageTransition {
 		this.fromIndex = fromIndex;
 		this.targetIndex = targetIndex;
 		this.direction = direction;
+		
+		// Add proper class
+		if (direction === 1) {
+			this.targetPage.element.classList.add("next");
+		} else {
+			this.targetPage.element.classList.add("previous");
+		}
 	}
 
 	slide(duration: number, callback = function () { }) {
@@ -36,16 +43,11 @@ export default class PageTransition {
 		const parentHeightInitial = this.parent.element.getBoundingClientRect().height;
 		const parentHeightAfter = this.targetPage.element.getBoundingClientRect().height;
 
-		console.log(parentHeightInitial);
-		console.log(parentHeightAfter);
-
 		const fromPositionInitial = 0;
 		const fromPositionAfter = fromPositionInitial - (this.targetPage.element.scrollWidth * this.direction);
 
 		const targetPositionInitial = this.fromPage.element.scrollWidth * this.direction;
 		const targetPositionAfter = 0;
-
-
 
 		this.parent.element.animate([
 			{ height: parentHeightInitial + "px" },

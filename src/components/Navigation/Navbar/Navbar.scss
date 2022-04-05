@@ -10,6 +10,7 @@
 	padding: 0 calc(var(--spacing) * 2);
 	font-weight: 700;
 	font-size: 1.2em;
+	flex-shrink: 0;
 	
 	> a {
 		height: 100%;
@@ -36,6 +37,7 @@
 		color: var(--navbar-menu-item-text);
 		background-color: var(--navbar-menu-item-bg);
 		transition: var(--transition);
+		white-space: nowrap;
 	}
 
 	&:hover {
@@ -43,7 +45,6 @@
 			color: var(--navbar-menu-item-text-hover);
 			background-color: var(--navbar-menu-item-bg-hover);
 			box-shadow: inset 0 -4px 0 var(--navbar-menu-item-indicator-hover, transparent);
-			transition-duration: 0s;
 		}
 	}
 
@@ -63,6 +64,37 @@
 			font-weight: 500;
 		}
 	}
+
+	// Mobile View
+	@media screen and ( max-width: calc($media-md - 1px) ) {
+		width: 100%;
+		height: auto !important;
+		margin: 0;
+
+		> a {
+			width: 100%;
+			padding: calc(var(--spacing) * 2);
+		}
+
+		&:hover {
+			> a {
+				box-shadow: none;
+			}
+		}
+		
+		&:active {
+			> a {
+				box-shadow: none;
+			}
+		}
+
+		&.active {
+			> a {
+				box-shadow: none;
+			}
+		}
+	}
+
 }
 
 @mixin navbar-menu() {
@@ -72,8 +104,37 @@
 	list-style: none;
 	display: flex;
 
+
 	> li {
 		@include navbar-menu-item();
+	}
+
+	// Mobile View
+	@media screen and ( max-width: calc($media-md - 1px) ) {
+		position: absolute;
+		top: var(--navbar-height, 8rem);
+		left: 0;
+		width: 100%;
+		height: calc(100vh - var(--navbar-height)) !important;
+		bottom: 0;
+		padding: 0;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background-color: var(--navbar-bg);
+		transition: all 0.5s var(--transition-easing);
+
+		&:not(.open) {
+			opacity: 0;
+			transform: translateX(100vw);
+		}
+
+		&.open {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 }
 
@@ -102,6 +163,11 @@
 	justify-content: flex-start;
 	overflow: hidden;
 	background-color: var(--navbar-bg, transparent);
+
+	// Mobile View
+	@media screen and ( max-width: calc($media-md - 1px) ) {
+		overflow: visible;
+	}
 
 	.menu {
 		@include navbar-menu();

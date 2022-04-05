@@ -132,7 +132,7 @@ export default class PagedComponent extends Component {
 	/** Initialize component configuration. */
 	initConfig(config: any): void {
 		const configuration = { ...this.element.dataset, ...config };
-		this._config 			= PagedComponentConfigDefaults;
+		this._config 			= { ...PagedComponentConfigDefaults, ...config };
 		this.transition 		= configuration["transition"] 			? configuration["transition"] 					: this._config["transition"];
 		this.transitionDuration = configuration["transitionDuration"] 	? parseInt(configuration["transitionDuration"]) : this._config["transitionDuration"];
 		this.autoplay 			= configuration["autoplay"] 			? configuration["autoplay"] 					: this._config["autoplay"];
@@ -151,6 +151,10 @@ export default class PagedComponent extends Component {
 			pageContainerElement = document.createElement("div");
 			pageContainerElement.setAttribute("class", this._config.pageContainerSelector.replace(".", ""));
 			this.element.appendChild(pageContainerElement);
+			const pageElements = this.element.querySelectorAll(this._config.pageSelector);
+			for (const page of pageElements) {
+				pageContainerElement.appendChild(page);
+			}
 		};
 		this.pageContainer = new PageContainer(this, pageContainerElement as HTMLElement);
 	}

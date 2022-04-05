@@ -59,11 +59,11 @@
 @mixin margin-left($value)     		{ margin-left: $value * 1rem !important; }
 
 // - Padding
-@mixin padding($value)          	{ padding: $value * 1rem; }
-@mixin padding-top($value)      	{ padding-top: $value * 1rem; }
-@mixin padding-right($value)    	{ padding-right: $value * 1rem; }
-@mixin padding-bottom($value)   	{ padding-bottom: $value * 1rem; }
-@mixin padding-left($value)     	{ padding-left: $value * 1rem; }
+@mixin padding($value)          	{ padding: $value * 1rem !important; }
+@mixin padding-top($value)      	{ padding-top: $value * 1rem !important; }
+@mixin padding-right($value)    	{ padding-right: $value * 1rem !important; }
+@mixin padding-bottom($value)   	{ padding-bottom: $value * 1rem !important; }
+@mixin padding-left($value)     	{ padding-left: $value * 1rem !important; }
 
 // - Opacity
 @mixin opacity($value)				{ @if ($value == 0) { opacity: 0; } @else { opacity: math.div($value, 100); }; }
